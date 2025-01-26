@@ -13,14 +13,14 @@
 }
 
 .hero-content .logo {
-    width: 60%;
+    width: 40%;
 }
 
 .hero-content h1 {
     font-size: 32px;
     font-weight: normal;
 
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .hero-content a {
@@ -36,7 +36,7 @@
     border-radius: 14px;
     font-size: 40px;
 
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .hero-content p {
@@ -45,7 +45,7 @@
     font-size: 24px;
     line-height: 30px;
 
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .hero-content span {
@@ -55,7 +55,7 @@
     line-height: 20px;
     position: relative;
 
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -66,11 +66,11 @@
 
 .hero1 {
     position: absolute;
-    width: 400px;
-    height: 490px;
+    width: 350px;
+    height: 400px;
 
-    margin-left: -110px;
-    margin-top: 10px;
+    margin-left: -90px;
+    margin-top: 90px;
 
     z-index: 0;
 }
@@ -88,7 +88,7 @@
 
 .coin1 {
     position: absolute;
-    top: 10%;
+    top: 2%;
     left: 55%;
     width: 150px;
     z-index: -1;
@@ -96,7 +96,7 @@
 
 .coin2 {
     position: absolute;
-    top: 30%;
+    top: 25%;
     width: 350px;
     left: 30%;
     z-index: -1;
@@ -112,7 +112,7 @@
 
 @media (max-width: 1100px) {
     .hero-content .logo {
-        width: 70%;
+        width: 50%;
     }
 }
 
@@ -139,28 +139,25 @@
     }
 
     .hero-content h1 {
-        margin-top: 50px;
+        margin-top: 60px;
     }
     
     .hero-content a {
-        margin-top: 80px;
+        margin-top: 90px;
     }
     
     .hero-content p {
-        margin-top: 80px;
+        margin-top: 90px;
     }
     
     .hero-content span {
-        margin-top: 100px;
+        margin-top: 110px;
     }
 }
 
 @media (max-width: 900px) {
     .hero1 {
-        width: 400px;
-        height: 490px;
-        margin-left: -85px;
-        margin-top: 0px;
+        margin-left: -45px;
     }
 
     .hero2 {
@@ -176,28 +173,28 @@
     }
 
     .hero-content h1 {
-        margin-top: 60px;
+        margin-top: 80px;
     }
     
     .hero-content a {
-        margin-top: 100px;
+        margin-top: 110px;
     }
     
     .hero-content p {
-        margin-top: 100px;
+        margin-top: 110px;
     }
     
     .hero-content span {
-        margin-top: 120px;
+        margin-top: 130px;
     }
 }
 
 @media (max-width: 800px) {
     .hero1 {
-        width: 360px;
-        height: 440px;
-        margin-left: -65px;
-        margin-top: 30px;
+        width: 320px;
+        height: 400px;
+        margin-left: -55px;
+        margin-top: 70px;
     }
 
     .hero2 {
@@ -247,7 +244,7 @@
     }
 
     .hero-content .logo {
-        width: 95%;
+        width: 90%;
     }
 
     .hero-content h1 {
