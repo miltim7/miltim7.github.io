@@ -94,6 +94,11 @@
     margin-bottom: -50px;
 }
 
+@media (min-width: 1201px) {
+    .coin2 {
+        margin-left: 40px;
+    }
+}
 
 @media (max-width: 1000px) {
     .hero-content .start {
