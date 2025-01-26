@@ -9,18 +9,17 @@
     justify-content: space-between;
     margin-left: 70px;
     width: 70%;
-    height: 97vh;
     margin: 0px 0 20px 70px;
 }
 
 .hero-content .logo {
-    width: 70%;
+    width: 60%;
 }
 
 .hero-content h1 {
     font-size: 32px;
     font-weight: normal;
-    margin-top: -20px;
+    margin-top: 30px;
 }
 
 .hero-content a {
@@ -38,7 +37,7 @@
     border-radius: 14px;
     font-size: 40px;
 
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .hero-content p {
@@ -46,7 +45,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .hero-content span {
@@ -54,7 +53,8 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
-    margin-top: 70px;
+    margin-top: 90px;
+    position: relative;
 }
 
 /* ------------------------------------------------------------------- */
@@ -65,22 +65,22 @@
 
 .hero1 {
     position: absolute;
-    width: 500px;
-    height: 610px;
+    width: 400px;
+    height: 490px;
 
-    margin-left: -90px;
-    margin-top: -90px;
+    margin-left: -110px;
+    margin-top: 10px;
 
     z-index: 0;
 }
 
 .hero2 {
     position: absolute;
-    width: 760px;
-    height: 650px;
+    width: 660px;
+    height: 600px;
 
-    margin-left: -360px;
-    margin-top: 150px;
+    margin-left: -380px;
+    margin-top: 160px;
 
     z-index: -1;
 }
@@ -90,13 +90,15 @@
     top: 10%;
     left: 55%;
     width: 150px;
+    z-index: -1;
 }
 
 .coin2 {
     position: absolute;
-    top: 30%;
+    top: 30rem;
     width: 350px;
     left: 30%;
+    z-index: -1;
 }
 
 .coin3 {
@@ -104,6 +106,7 @@
     top: 70%;
     width: 150px;
     left: -1.5%;
+    z-index: -1;
 }
 
 @media (max-width: 1100px) {
@@ -191,7 +194,7 @@
         display: block !important;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 0%;
         width: 60px;
     }
 
@@ -211,7 +214,7 @@
     }
 
     .hero-content .logo {
-        width: 100%;
+        width: 95%;
     }
 
     .hero-content h1 {
@@ -238,11 +241,12 @@
     }
 
     .hero-content span {
-        position: absolute;
+        /* position: absolute;
         top: 101%;
         font-size: 16px;
-        line-height: 20px;
+        line-height: 20px; */
         margin-bottom: 10px;
+        margin-top: 20px;
     }
 
     .logo {
@@ -253,7 +257,16 @@
         max-width: 100px;
     }
 
-    .hero1 {
+    .hero1,
+    .hero2 {
+        display: none;
+    }
+
+    .hero2-1 {
+        display: inline !important;
+    }
+
+    /* .hero1 {
         margin: 0;
         width: 250px;
         height: 310px;
@@ -274,6 +287,20 @@
         top: 95%;
         left: 50%;
         transform: translate(-50%, -50%);
+    } */
+}
+
+@media (max-width: 490px) {
+    .hero2-1 {
+        width: 450px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero2-1 {
+        width: 400px;
+        margin-top: 10px;
     }
 }
 
