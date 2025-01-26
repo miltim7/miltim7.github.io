@@ -9,21 +9,20 @@
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-left: 70px;
-    width: 50%;
-    margin: 0px 0 20px 70px;
+    justify-content: space-around;
+    width: 40%;
+    margin: -40px 20px 20px 60px;
 }
 
 .hero-content .logo {
-    width: 90%;
+    width: 100%;
 }
 
 .hero-content h1 {
     font-size: 32px;
     font-weight: normal;
 
-    margin-top: 20px;
+    margin-top: -50px;
 }
 
 .hero-content .start {
@@ -39,7 +38,7 @@
     border-radius: 14px;
     font-size: 40px;
 
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .hero-content .offer {
@@ -49,7 +48,7 @@
     line-height: 30px;
     color: #000;
 
-    margin-top: 70px;
+    margin-top: 0px;
 }
 
 .hero-content span {
@@ -59,16 +58,16 @@
     line-height: 20px;
     position: relative;
 
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .hero-img {
-    max-height: 97vh;
+    width: 60%;
     overflow: hidden;
 }
 
 .heroDesktop {
-    width: 600px;
+    width: 670px;
     margin-top: 100px;
     overflow: hidden;
 }
@@ -90,7 +89,9 @@
 }
 
 .coin3 {
-    width: 100px;
+    width: 150px;
+    margin-top: -70px;
+    margin-bottom: -50px;
 }
 
 
@@ -117,7 +118,7 @@
     }
 
     .heroDesktop {
-        width: 550px;
+        width: 600px;
     }
 
     .hero-content {
@@ -125,9 +126,21 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .heroDesktop {
+        width: 640px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .heroDesktop {
+        width: 600px;
+    }
+}
+
 @media (max-width: 900px) {
     .heroDesktop {
-        width: 500px;
+        width: 560px;
     }
 }
 
