@@ -640,18 +640,18 @@
                         </li>
                     </ul>
                 </div>
-                <form class="contact-form" data-aos="fade-left" method="post" action="send_message.php">
+                <form class="contact-form" data-aos="fade-left" action="send_message.php" method="post">
                     <div class="form-group">
-                        <input name="name" type="text" placeholder="Имя" required>
+                        <input name="name" id="name" type="text" placeholder="Имя" required>
                     </div>
                     <div class="form-group">
-                        <input name="email" type="email" placeholder="Email" required>
+                        <input name="email" id="email" type="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input name="phone" type="tel" placeholder="Номер телефона" required>
+                        <input name="phone" id="phone" type="tel" placeholder="Номер телефона" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Сообщение" rows="4" required></textarea>
+                        <textarea name="message" id="message" placeholder="Сообщение" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                 </form>
