@@ -1,5 +1,5 @@
 <?php
-$to = "timursailing70@gmail.com";
+$to = "dial688@mail.ru";
 
 if (!empty($_POST['honeypot'])) {
     exit;
