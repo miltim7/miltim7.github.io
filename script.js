@@ -105,48 +105,48 @@ window.addEventListener('scroll', () => {
 });
 
 // Form submission with validation
-const contactForm = document.querySelector('.contact-form');
+// const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// contactForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
     
-    // Basic form validation
-    const formInputs = contactForm.querySelectorAll('input, textarea');
-    let isValid = true;
+//     // Basic form validation
+//     const formInputs = contactForm.querySelectorAll('input, textarea');
+//     let isValid = true;
 
-    formInputs.forEach(input => {
-        if (input.required && !input.value.trim()) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
+//     formInputs.forEach(input => {
+//         if (input.required && !input.value.trim()) {
+//             isValid = false;
+//             input.classList.add('error');
+//         } else {
+//             input.classList.remove('error');
+//         }
 
-        // Email validation
-        if (input.type === 'email' && input.value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(input.value)) {
-                isValid = false;
-                input.classList.add('error');
-            }
-        }
-    });
+//         // Email validation
+//         if (input.type === 'email' && input.value) {
+//             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//             if (!emailRegex.test(input.value)) {
+//                 isValid = false;
+//                 input.classList.add('error');
+//             }
+//         }
+//     });
 
-    if (isValid) {
-        // Add success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'form-success';
-        successMessage.textContent = 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.';
+//     if (isValid) {
+//         // Add success message
+//         const successMessage = document.createElement('div');
+//         successMessage.className = 'form-success';
+//         successMessage.textContent = 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.';
         
-        contactForm.insertAdjacentElement('beforebegin', successMessage);
-        contactForm.reset();
+//         contactForm.insertAdjacentElement('beforebegin', successMessage);
+//         contactForm.reset();
 
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.remove();
-        }, 5000);
-    }
-});
+//         // Remove success message after 5 seconds
+//         setTimeout(() => {
+//             successMessage.remove();
+//         }, 5000);
+//     }
+// });
 
 // Animate numbers in hero stats
 const statsNumbers = document.querySelectorAll('.stat-number');
