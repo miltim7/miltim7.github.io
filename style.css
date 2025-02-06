@@ -1,12 +1,12 @@
 /* Reset and base styles */
 :root {
-    --primary-color: #047857; /* Темно-зеленый */
-    --secondary-color: #065f46; /* Глубокий зелёный */
-    --text-color: #1f2937; /* Темно-серый */
-    --light-text: #6b7280; /* Светло-серый */
-    --background: #ffffff; /* Белый */
-    --light-background: #f0fdf4; /* Светло-зелёный */
-    --border-color: #d1fae5; /* Бледно-зелёный */
+    --primary-color: #047857;
+    --secondary-color: #065f46;
+    --text-color: #1f2937;
+    --light-text: #6b7280;
+    --background: #ffffff;
+    --light-background: #f0fdf4;
+    --border-color: #d1fae5;
     --transition: all 0.3s ease;
 }
 

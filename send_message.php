@@ -26,7 +26,7 @@ Email: $email
 
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-$subject = "Новое сообщение из сайта Aagroup";
+$subject = "Новое сообщение из сайта АЗ-Консалт";
 
 if (mail($to, $subject, $body, $headers)) {
     header("Location: /");
