@@ -1,0 +1,62 @@
+/* Стили для страницы "Договор-оферты на оказание услуг по графическому дизайну" */
+.contract {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+.contract h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contract h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.contract h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.contract p {
+    margin-bottom: 1rem;
+}
+
+.contract ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contract ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+}
+
+.contract a {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+@media (max-width: 1024px) {
+    .contract h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contract h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 450px) {
+    .contract h1 {
+        font-size: 20px;
+    }
+}

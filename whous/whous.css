@@ -1,0 +1,126 @@
+#whous {
+    padding: 80px 15px;
+    background-color: #f5f7fa;
+}
+
+#whous .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.whous-left {
+    flex: 1 1 50%;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whous-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whous-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #555;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whous-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whous-right {
+    flex: 1 1 45%;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whous-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+#whous.in-view .whous-left {
+    animation: fadeInUp 1s ease forwards 0s;
+}
+
+#whous.in-view .whous-title {
+    animation: fadeInUp 1s ease forwards 0.1s;
+}
+
+#whous.in-view .whous-subtitle {
+    animation: fadeInUp 1s ease forwards 0.2s;
+}
+
+#whous.in-view .whous-text {
+    animation: fadeInUp 1s ease forwards 0.3s;
+}
+
+#whous.in-view .whous-right {
+    animation: fadeInUp 1s ease forwards 0.4s;
+}
+
+#whous.in-view .whous-right img {
+    animation: fadeInScale 1s ease forwards 0.5s;
+}
+
+@media (max-width: 768px) {
+    #whous .container {
+        flex-direction: column;
+    }
+    .whous-left,
+    .whous-right {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+    .whous-title {
+        font-size: 2rem;
+    }
+    .whous-subtitle {
+        font-size: 1.3rem;
+    }
+    .whous-text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

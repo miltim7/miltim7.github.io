@@ -1,0 +1,171 @@
+#whyus {
+    background: url('images/img.webp') center/cover;
+}
+
+
+#whyus .container {
+    padding: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #000000eb;
+}
+
+.whyus-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.whyus-content.animate {
+    animation: fadeInUp 0.6s forwards;
+}
+
+.whyus-heading {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.whyus-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.whyus-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whyus-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.whyus-btn svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.3s;
+}
+
+.whyus-btn.catalog svg {
+    transform: rotate(180deg);
+}
+
+.whyus-counters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.whyus-counters.animate {
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+.counter-block {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.counter {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.counter-block p {
+    font-size: 1rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1024px) {
+    #whyus .container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .whyus-heading {
+        font-size: 2.2rem;
+    }
+
+    .whyus-subheading {
+        font-size: 1rem;
+    }
+
+    .whyus-counters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #whyus .container {
+        padding: 50px 20px;
+    }
+
+    .counter-block {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whyus-heading {
+        font-size: 1.8rem;
+    }
+
+    .whyus-subheading {
+        font-size: 0.9rem;
+    }
+
+    .whyus-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .counter {
+        font-size: 2rem;
+    }
+    .counter-block {
+        min-width: 240px;
+        width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

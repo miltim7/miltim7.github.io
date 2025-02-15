@@ -1,0 +1,329 @@
+.packages .container {
+    margin: 0 auto;
+}
+
+.packages {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    word-wrap: break-word;
+}
+
+.packages h2 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.packages p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #666;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.slider-track .package {
+    flex: 0 0 100%;
+    padding: 100px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.package-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.package-header h3 {
+    font-size: 32px;
+}
+
+.badge {
+    background: #ff4757;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.description {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #666;
+    text-align: left !important;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.price .period {
+    font-size: 16px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.package-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.package-content>div {
+    flex: 1;
+    min-width: 280px;
+}
+
+.package-content h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.package-content ul {
+    list-style: none;
+}
+
+.package-content li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.package-content li:hover {
+    color: #ff0080;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #28a745;
+    flex-shrink: 0;
+}
+
+.locked {
+    color: #999;
+}
+
+.locked .icon {
+    fill: #999;
+}
+
+
+/* Order Button: white background with black border */
+.order-btn {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 16px 32px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.order-btn:hover {
+    background: #f7f7f7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Slider Buttons: thin, gray, no background or hover animation */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    margin: 20px;
+    font-weight: lighter;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #000;
+}
+
+@media (max-width: 768px) {
+    .packages {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    .package-content {
+        flex-direction: column;
+    }
+
+    .packages h2 {
+        font-size: 24px;
+    }
+
+    .packages p {
+        font-size: 14px;
+    }
+
+    .package-header h3 {
+        font-size: 24px;
+    }
+
+    .badge {
+        display: none
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 26px;
+    }
+
+    .price .period {
+        font-size: 14px;
+    }
+
+    .package-content h4 {
+        font-size: 18px;
+    }
+
+    .package-content li {
+        font-size: 14px;
+    }
+
+    .order-btn {
+        font-size: 16px;
+    }
+
+    .slider-btn {
+        font-size: 18px;
+    }
+
+    .slider-track .package {
+        padding: 50px 20px;
+    }
+
+    .package-content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .slider-btn {
+        display: none;
+    }
+
+    .package-content {
+        flex-direction: column;
+    }
+
+    .packages h2 {
+        font-size: 18px;
+    }
+
+    .packages p {
+        font-size: 12px;
+    }
+
+    .package-header h3 {
+        font-size: 18px;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .price .period {
+        font-size: 12px;
+    }
+
+    .package-content h4 {
+        font-size: 16px;
+    }
+
+    .package-content li {
+        font-size: 12px;
+    }
+
+    .order-btn {
+        font-size: 14px;
+    }
+
+    .slider-btn {
+        font-size: 16px;
+    }
+
+    .slider-track .package {
+        padding: 18px;
+    }
+
+    .package-content {
+        gap: 10px;
+    }
+}
