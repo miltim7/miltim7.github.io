@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return html;
   }
 
-  // Функция для загрузки данных из treeData.json
+  // Функция для загрузки данных из treeData.json и установки начального обзора дерева
   function loadTreeData() {
     fetch("treeData.json")
       .then(response => response.json())
@@ -69,9 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
         Object.keys(personById).forEach(key => delete personById[key]);
         const treeRoot = document.getElementById("tree-root");
         treeRoot.innerHTML = generateTree(treeData);
-        // Вместо центрирования, устанавливаем начальное положение так,
-        // чтобы левая часть дерева была видна (translateX = 0)
+        // Устанавливаем начальное положение так, чтобы начало дерева было видно
         setTimeout(() => {
+          // Здесь устанавливаем translateX и translateY так, чтобы левая часть дерева была видна
+          // Для простоты, задаем translateX = 0, translateY = 0
           translateX = 0;
           translateY = 0;
           updateTransform();
@@ -145,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target === modal) hideModal();
   });
 
-  // Функционал зума и перетаскивания дерева (ПК и планшеты)
+  // Функционал зума и перетаскивания дерева (ПК/Планшет)
   const wrapper = document.getElementById('tree-container-wrapper');
   const treeContainer = document.getElementById('tree-container');
   let isDragging = false, startX, startY;
@@ -195,7 +196,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Добавляем поддержку touch событий для мобильных устройств
+  // Обновлённый функционал pinch-zoom для мобильных устройств
+  let initialDistance = null, initialScale = null, initialTranslateX = null, initialTranslateY = null;
+  let initialCenterX = null, initialCenterY = null;
   wrapper.addEventListener('touchstart', function (e) {
     if (e.touches.length === 1) {
       isDragging = true;
@@ -205,6 +208,10 @@ document.addEventListener("DOMContentLoaded", function () {
       isDragging = false;
       initialDistance = getDistance(e.touches[0], e.touches[1]);
       initialScale = scale;
+      initialTranslateX = translateX;
+      initialTranslateY = translateY;
+      initialCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      initialCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
     }
   }, {passive: false});
 
@@ -221,7 +228,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (e.touches.length === 2) {
       let currentDistance = getDistance(e.touches[0], e.touches[1]);
       let pinchScale = currentDistance / initialDistance;
-      scale = initialScale * pinchScale;
+      let newScale = initialScale * pinchScale;
+      // Вычисляем текущий центр
+      let currentCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      let currentCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      // Обновляем трансляцию так, чтобы центр оставался фиксированным
+      translateX = currentCenterX - (currentCenterX - initialTranslateX) * (newScale / initialScale);
+      translateY = currentCenterY - (currentCenterY - initialTranslateY) * (newScale / initialScale);
+      scale = newScale;
       updateTransform();
     }
   }, {passive: false});
