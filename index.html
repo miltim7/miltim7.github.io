@@ -2,281 +2,494 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Binary Tree Structure</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/blog.css">
-  <link rel="stylesheet" href="css/drevo.css">
-  <link rel="stylesheet" href="css/modals.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script defer src="js/script.js"></script>
-  <script defer src="js/header.js"></script>
+  <title>STREAMLINE - Надёжно, быстро и выгодно</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/why-us.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.344.0/dist/umd/lucide.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="header-container">
-      <a class="logo" href="/">Шуховцевы-Шуховцевы</a>
-      <nav class="nav-links">
-        <a href="#container">Семейное древо</a>
-        <a href="#blog">Статьи</a>
-      </nav>
-      <div class="contacts">
-        <p>По любым вопросам</p>
-        <img src="images/right-arrow.png" alt="Arrow">
-        <a href="https://vk.com/"><img src="images/vk.svg" alt="VK"></a>
-        <a href="https://api.whatsapp.com/send/?phone=79000880989&amp;text=...">
-          <img src="images/wp.svg" alt="WhatsApp">
-        </a>
-      </div>
-      <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-content">
-        <a class="logo" href="/">Шуховцевы-Шуховцевы</a>
-        <nav class="mobile-nav-links">
-          <a href="#container">Семейное древо</a>
-          <a href="#blog">Статьи</a>
-        </nav>
-        <div class="contacts">
-          <div>
-            <p>По любым вопросам</p>
-            <img src="images/right-arrow.png" alt="Arrow">
-          </div>
-          <div>
-            <a href="https://vk.com/"><img class="social-icon" src="images/vk.svg" alt="VK"></a>
-            <a href="https://api.whatsapp.com/send/?phone=79000880989&amp;text=..."><img class="social-icon" src="images/wp.svg" alt="WhatsApp"></a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="logo">
+          <h1>STREAMLINE</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button class="nav-link active" data-target="home">Главная</button>
+          <button class="nav-link" data-target="about">О компании</button>
+          <button class="nav-link" data-target="why-us">Почему мы</button>
+          <button class="nav-link" data-target="road-freight">Услуги</button>
+          <button class="contact-btn" data-target="contact">Связаться</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="mobile-menu-btn">
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  
-  
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-blur">
+      <!-- Mobile Navigation -->
+      <div class="mobile-menu">
+        <button class="nav-link active" data-target="home">Главная</button>
+        <button class="nav-link" data-target="about">О компании</button>
+        <button class="nav-link" data-target="why-us">Почему мы</button>
+        <button class="nav-link" data-target="road-freight">Услуги</button>
+        <button class="contact-btn" data-target="contact">Связаться</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-shapes">
+      <div class="hero-shape hero-shape-1"></div>
+      <div class="hero-shape hero-shape-2"></div>
+      <div class="hero-shape hero-shape-3"></div>
+      <div class="hero-shape hero-shape-4"></div>
+    </div>
+    <div class="container">
       <div class="hero-content">
-        <h1>Добро пожаловать на сайт, посвященный родословной семьи Шуховцевых!</h1>
-        <p>Здесь вы сможете узнать о богатой истории и наследии семьи, исследовать генеалогическое древо и прочитать
-          статьи о предках. История семьи Шуховцевых — это наша общая память!</p>
-        <div class="hero-buttons">
-          <a href="#container" class="hero-btn">Семейное Древо</a>
-          <a href="#blog" class="hero-btn second">Статьи</a>
+        <h1 class="animate-fadeInDown">ИННОВАЦИОННЫЕ ЛОГИСТИЧЕСКИЕ РЕШЕНИЯ</h1>
+        <p class="animate-fadeInUp">Мы объединяем передовые технологии и индивидуальный подход для создания оптимальных
+          маршрутов доставки вашего груза.</p>
+        <button class="cta-button animate-pulse" data-target="contact">Оставить заявку</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Section -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>О компании</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="about-content-wrapper">
+        <div class="about-image">
+          <img
+            src="assets/images/about1.jpg"
+            alt="Логистика">
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-text">лет опыта</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-text">клиентов</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-text">перевозок</span>
+            </div>
+          </div>
+          <img
+            src="assets/images/about2.jpg"
+            alt="Логистика">
+        </div>
+
+        <div class="about-text">
+          <p class="animate-on-scroll">
+            Мы — компактная, но динамично развивающаяся транспортно-экспедиционная компания, уверенно работающая на
+            локальном рынке. За это время мы сформировали стабильный портфель клиентов, и для нас каждый из них — не
+            просто заказчик, а часть большой семьи. Мы ценим доверие, которое нам оказывают, и стремимся к тому, чтобы
+            каждый клиент чувствовал внимание, заботу и уверенность в качестве наших услуг.
+          </p>
+
+          <p class="animate-on-scroll" data-delay="200">
+            Мы понимаем, что логистика — это не только доставка, но и оптимизация затрат, точное соблюдение сроков и
+            безупречный сервис. Поэтому мы предлагаем выгодные маршруты, гибкие условия и продуманную стратегию
+            перевозок, чтобы сохранить не только ваш груз, но и ваши ресурсы.
+          </p>
+
+          <div class="about-quote animate-on-scroll" data-delay="400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quote-icon">
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+              </path>
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+              </path>
+            </svg>
+            <p>Для нас логистика — это ответственность за бизнес наших клиентов.</p>
+          </div>
+
+          <div class="about-values">
+            <div class="value-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="value-icon">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Надежность</span>
+            </div>
+            <div class="value-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="value-icon">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Пунктуальность</span>
+            </div>
+            <div class="value-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="value-icon">
+                <path
+                  d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z">
+                </path>
+              </svg>
+              <span>Забота</span>
+            </div>
+            <div class="value-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="value-icon">
+                <path d="M12 2v4"></path>
+                <path d="M12 18v4"></path>
+                <path d="M4.93 4.93l2.83 2.83"></path>
+                <path d="M16.24 16.24l2.83 2.83"></path>
+                <path d="M2 12h4"></path>
+                <path d="M18 12h4"></path>
+                <path d="M4.93 19.07l2.83-2.83"></path>
+                <path d="M16.24 7.76l2.83-2.83"></path>
+              </svg>
+              <span>Инновации</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Container (Древо) -->
-  <section id="container" class="container-section">
-    <div class="container-controls">
-      <div class="container-buttons">
-        <button id="add-child-btn">Добавить ребенка</button>
-        <button id="add-spouse-btn">Добавить супруга(-а)</button>
+  <!-- 3. Why Choose Us Section -->
+  <!-- Why Choose Us Section -->
+<section id="why-us" class="why-us-section section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Почему наши клиенты выбирают нас</h2>
+      <span class="underline"></span>
+    </div>
+    
+    <div class="features">
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-content">
+          <h3>Надежность и ответственность</h3>
+          <p>
+            Мы работаем только с проверенными перевозчиками, у которых есть опытная профессиональная команда и надежная страховка, обеспечивающая дополнительную защиту грузов и инвестиций наших клиентов.
+          </p>
+        </div>
       </div>
-      <div class="navigation-controls">
-        <button class="nav-btn up">↑</button>
-        <button class="nav-btn left">←</button>
-        <button class="nav-btn down">↓</button>
-        <button class="nav-btn right">→</button>
-        <button class="zoom-btn plus">+</button>
-        <button class="zoom-btn minus">−</button>
+      
+      <div class="feature-card animate-on-scroll" data-delay="100">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-route"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
+        </div>
+        <div class="feature-content">
+          <h3>Оптимальные логистические решения</h3>
+          <p>
+            Мы предлагаем эффективные маршруты, которые позволяют снизить затраты и ускорить доставку. Гибкие условия сотрудничества адаптируются под потребности клиента.
+          </p>
+        </div>
+      </div>
+      
+      <div class="feature-card animate-on-scroll" data-delay="200">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="feature-content">
+          <h3>Индивидуальный подход</h3>
+          <p>
+            Каждый клиент для нас – партнёр, а не просто заказчик. Мы учитываем уникальные требования бизнеса и подбираем наилучшие логистические решения.
+          </p>
+        </div>
+      </div>
+      
+      <div class="feature-card animate-on-scroll" data-delay="300">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+        </div>
+        <div class="feature-content">
+          <h3>Прозрачность и честные цены</h3>
+          <p>
+            Наши клиенты всегда знают, за что платят. Мы работаем открыто и честно, предоставляя конкурентные тарифы.
+          </p>
+        </div>
+      </div>
+      
+      <div class="feature-card animate-on-scroll" data-delay="400">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer"><path d="M10 2h4"/><path d="M12 14v-4"/><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"/><path d="M9 17H4v5"/></svg>
+        </div>
+        <div class="feature-content">
+          <h3>Гибкость и оперативность</h3>
+          <p>
+            Мы ценим наших клиентов и всегда стремимся быстро реагировать на их запросы. Следим за изменениями на рынке, адаптируемся к новым условиям и своевременно информируем клиентов.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="tree-scroll-wrapper">
-      <div id="tree-container-wrapper">
-        <div id="tree-container">
-          <div class="tree" id="tree-root"></div>
+  </div>
+</section>
+
+
+  <!-- Road Freight Section -->
+<section id="road-freight" class="service-section section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Наземные перевозки</h2>
+      <span class="underline"></span>
+    </div>
+    
+    <div class="service-block animate-on-scroll">
+      <div class="service-image">
+        <img src="assets/images/landfreight.jpg" alt="Автомобильные перевозки">
+      </div>
+      <div class="service-header">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><path d="M14 17h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
         </div>
+        <h3>Наземные перевозки</h3>
+      </div>
+      
+      <div class="service-content">
+        <div class="service-grid">
+          <div class="service-column">
+            <p>
+              Компания Streamline осуществляет международные и региональные перевозки грузов по разветвленной сети маршрутов. География перевозок охватывает все части Европы, Россию, Беларусь, Среднюю Азию и Турцию.
+            </p>
+            <p>
+              <span class="bold">FTL (Full Truck Load)</span> – полная загрузка транспорта для максимально быстрой и прямой доставки.
+            </p>
+            <p>
+              Развитая инфраструктура и современные транспортные решения позволяют перевозить грузы различных габаритов, включая негабаритные и тяжелые. Также мы организуем перевозку опасных грузов (ADR) и обеспечивает контролируемый температурный режим для пищевых продуктов с помощью рефрижераторов (REF).
+            </p>
+          </div>
+          <div class="service-column">
+            <p>
+              <span class="bold">LTL (Less Than Truckload)</span> – сборные грузы, оптимальное решение для небольших отправок.
+            </p>
+            <p>
+              Мы сотрудничаем с крупными складскими центрами в Европе: Германия, Италия, Нидерланды, Польша. Партнеры обеспечивают доставку сборных грузов из любой точки Европы, включая Великобританию, Норвегию и страны Прибалтики.
+            </p>
+            <p>
+              Дополнительно услуги консолидации грузов (LTL) доступны в Турции, России и Беларуси, что позволяет оптимизировать логистику и сократить расходы на перевозку.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sea Freight Section -->
+<section id="sea-freight" class="service-section section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Морские перевозки</h2>
+      <span class="underline"></span>
+    </div>
+    
+    <div class="service-block animate-on-scroll" data-delay="200">
+      <div class="service-image">
+        <img src="assets/images/seafreight.jpg" alt="Морские перевозки">
+      </div>
+      <div class="service-header">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ship"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg>
+        </div>
+        <h3>Морские перевозки</h3>
+      </div>
+      
+      <div class="service-content">
+        <div class="service-grid">
+          <div class="service-column">
+            <p>
+              Морские перевозки – это самый экономичный способ международной доставки грузов, особенно для крупных партий. Они обеспечивают широкую географию перевозок, оптимизацию затрат и возможность транспортировки практически любых типов грузов.
+            </p>
+            <p>
+              Компания Streamline организует морские перевозки по ключевым международным маршрутам. Благодаря выгодным соглашениям с ведущими морскими линиями и широкой сети партнеров, предлагаются конкурентоспособные тарифы, а также обеспечивается надежная, эффективная и оптимизированная логистика.
+            </p>
+          </div>
+          <div class="service-column">
+            <p>
+              <span class="bold">FCL (Full Container Load)</span> – перевозка грузов в полностью загруженном контейнере, что позволяет обеспечить максимальную безопасность и эффективность доставки. Этот формат подходит для широкого спектра грузов, включая опасные (ADR) и негабаритные.
+            </p>
+            <p>
+              <span class="bold">LCL (Less than Container Load)</span> – группажные перевозки (консолидация), позволяющие объединять небольшие партии грузов от разных отправителей в одном контейнере, что снижает транспортные расходы. Для удобства консолидации мы используем склады в Китае, Вьетнаме, Сингапуре, Малайзии, Индонезии, Японии, а также в странах Европы и Северной Америки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Air Freight Section -->
+<section id="air-freight" class="service-section section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Авиаперевозки</h2>
+      <span class="underline"></span>
+    </div>
+    
+    <div class="service-block animate-on-scroll" data-delay="400">
+      <div class="service-image">
+        <img src="assets/images/airfreight.jpg" alt="Авиаперевозки">
+      </div>
+      <div class="service-header">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+        </div>
+        <h3>Авиаперевозки</h3>
+      </div>
+      
+      <div class="service-content">
+        <p>
+          Авиаперевозки – это самый быстрый способ международной доставки грузов, обеспечивающий минимальные сроки транзита и высокий уровень безопасности. Оптимальное решение для срочных отправок и дорогостоящих товаров.
+        </p>
+        <p>
+          Воздушный транспорт – идеальное решение, когда важны сроки и надежность. Streamline сотрудничает с ведущими авиаперевозчиками, оптимизирует маршруты и контролирует весь процесс доставки, чтобы груз прибыл вовремя и в полной сохранности.
+        </p>
+        <p>
+          Понимая, что авиаперевозки – один из самых дорогих видов транспорта, компания Streamline запрашивает ставки у нескольких авиалиний, чтобы предложить клиентам наиболее выгодные условия без потери качества и скорости доставки.
+        </p>
+        <p>
+          Также возможна перевозка опасных грузов (DGR) и температурных грузов с контролируемыми условиями (AVI/PHARMA/FOOD).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rail Freight Section -->
+<section id="rail-freight" class="service-section section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Железнодорожные перевозки</h2>
+      <span class="underline"></span>
+    </div>
+    
+    <div class="service-block animate-on-scroll" data-delay="600">
+      <div class="service-image">
+        <img src="assets/images/railway.avif" alt="Железнодорожные перевозки">
+      </div>
+      <div class="service-header">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h0"/><path d="M16 15h0"/></svg>
+        </div>
+        <h3>Железнодорожные перевозки</h3>
+      </div>
+      
+      <div class="service-content">
+        <p>
+          Железнодорожные перевозки – это надежное и экономичное решение для доставки грузов на большие расстояния. Они обеспечивают высокую грузоподъемность, стабильность графика и оптимизацию затрат, особенно для крупных партий товаров.
+        </p>
+        <p>
+          Компания Streamline предлагает ЖД перевозки по ключевым международным маршрутам, включая страны Европы, Китай, Россию, Беларусь и Среднюю Азию.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Свяжитесь с нами</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="contact-form-container animate-on-scroll">
+        <form class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Ваш email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Тема</label>
+            <input type="text" id="subject" placeholder="Тема сообщения">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" rows="5" placeholder="Ваше сообщение"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="blog-section">
-    <div class="blog-container">
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 1">
-        <div class="blog-meta">Travel Wednesday, June 25</div>
-        <div class="blog-title">Why every designer should visit Rotterdam?</div>
-        <div class="blog-desc">
-          After initial crisis re-construction the center of Rotterdam has become the site of ambitious new architecture.
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>STREAMLINE</h3>
+          <p>
+            Надёжные логистические решения для вашего бизнеса. Мы бережём ваши сроки и бюджет.
+          </p>
         </div>
-      </a>
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 2">
-        <div class="blog-meta">Fashion Tuesday, May 18</div>
-        <div class="blog-title">The rise of sustainable style</div>
-        <div class="blog-desc">
-          Exploring the trends that are reshaping fashion in the modern world.
-        </div>
-      </a>
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 3">
-        <div class="blog-meta">Food Friday, April 14</div>
-        <div class="blog-title">A taste of local cuisine</div>
-        <div class="blog-desc">
-          Discovering hidden culinary gems in unexpected places.
-        </div>
-      </a>
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 4">
-        <div class="blog-meta">Travel Monday, March 8</div>
-        <div class="blog-title">Exploring off-the-beaten-path destinations</div>
-        <div class="blog-desc">
-          How adventure awaits beyond the usual tourist spots.
-        </div>
-      </a>
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 5">
-        <div class="blog-meta">Design Saturday, February 20</div>
-        <div class="blog-title">Innovative trends in modern design</div>
-        <div class="blog-desc">
-          A deep dive into the creative world of cutting-edge design concepts.
-        </div>
-      </a>
-      <a href="#" class="blog-card">
-        <img src="images/blog1.jpg" alt="Blog 6">
-        <div class="blog-meta">Culture Sunday, January 10</div>
-        <div class="blog-title">Embracing diversity in urban spaces</div>
-        <div class="blog-desc">
-          How cultural fusion is transforming cities around the globe.
-        </div>
-      </a>
-    </div>
-  </section>
-  
-  
 
-  <!-- Modals -->
-  <div class="modal" id="person-modal">
-    <div class="modal-content">
-      <span class="close-modal" id="close-modal">&times;</span>
-      <div class="modal-header">
-        <img src="" alt="Фото" id="modal-photo">
-        <h2 id="modal-name"></h2>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>Email: info@streamline-logistics.com</p>
+          <p>Телефон: +994 99 999 99 99</p>
+          <p>Адрес: Address</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Режим работы</h3>
+          <p>Пн-Пт: 9:00 - 18:00</p>
+          <p>Сб-Вс: Выходной</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="info-row"><strong>Пол:</strong> <span id="modal-gender"></span></div>
-        <div class="info-row"><strong>Годы жизни:</strong> <span id="modal-years"></span></div>
-        <div class="info-row"><strong>Профессия:</strong> <span id="modal-profession"></span></div>
-        <div class="info-row"><strong>Место рождения:</strong> <span id="modal-birthPlace"></span></div>
-        <div class="info-row"><strong>Биография:</strong> <span id="modal-bio"></span></div>
-        <div class="info-row"><strong id="modal-father-label">Отец:</strong> <span id="modal-father"></span></div>
-        <div class="info-row"><strong id="modal-mother-label">Мать:</strong> <span id="modal-mother"></span></div>
-        <div class="info-row"><strong>Дети:</strong> <span id="modal-children"></span></div>
-      </div>
-      <div class="modal-actions">
-        <button id="edit-btn">Редактировать</button>
-        <button id="delete-btn">Удалить</button>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> STREAMLINE. Все права защищены.</p>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="modal" id="add-child-modal">
-    <div class="modal-content">
-      <span class="close-modal" id="close-add-modal">&times;</span>
-      <h2>Добавить ребенка</h2>
-      <form id="add-child-form">
-        <div class="form-row">
-          <label>ФИО:</label>
-          <input type="text" id="new-name" required>
-        </div>
-        <div class="form-row">
-          <label>Годы жизни:</label>
-          <input type="text" id="new-years" required>
-        </div>
-        <div class="form-row">
-          <label>Пол:</label>
-          <select id="new-gender">
-            <option value="Мужской">Мужской</option>
-            <option value="Женский">Женский</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Профессия:</label>
-          <input type="text" id="new-profession" required>
-        </div>
-        <div class="form-row">
-          <label>Место рождения:</label>
-          <input type="text" id="new-birthPlace" required>
-        </div>
-        <div class="form-row">
-          <label>Биография:</label>
-          <textarea id="new-bio" rows="3" required></textarea>
-        </div>
-        <div class="form-row">
-          <label>Фото:</label>
-          <input type="file" id="new-photo" accept="image/*">
-        </div>
-        <div class="form-row">
-          <button type="button" id="choose-parent-btn">Выбрать родителя</button>
-          <span id="selected-parent-text">Родитель не выбран</span>
-        </div>
-        <div class="form-row">
-          <button type="submit" id="submit-child-btn">Добавить</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal" id="add-spouse-modal">
-    <div class="modal-content">
-      <span class="close-modal" id="close-spouse-modal">&times;</span>
-      <h2>Добавить супруга(-у)</h2>
-      <form id="add-spouse-form">
-        <div class="form-row">
-          <label>ФИО:</label>
-          <input type="text" id="new-spouse-name" required>
-        </div>
-        <div class="form-row">
-          <label>Годы жизни:</label>
-          <input type="text" id="new-spouse-years" required>
-        </div>
-        <div class="form-row">
-          <label>Пол:</label>
-          <select id="new-spouse-gender">
-            <option value="Мужской">Мужской</option>
-            <option value="Женский">Женский</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Профессия:</label>
-          <input type="text" id="new-spouse-profession" required>
-        </div>
-        <div class="form-row">
-          <label>Место рождения:</label>
-          <input type="text" id="new-spouse-birthPlace" required>
-        </div>
-        <div class="form-row">
-          <label>Биография:</label>
-          <textarea id="new-spouse-bio" rows="3" required></textarea>
-        </div>
-        <div class="form-row">
-          <label>Фото:</label>
-          <input type="file" id="new-spouse-photo" accept="image/*">
-        </div>
-        <div class="form-row">
-          <button type="button" id="choose-spouse-btn">Выбрать супруга(-у)</button>
-          <span id="selected-spouse-text">Супруг(а) не выбран</span>
-        </div>
-        <div class="form-row">
-          <button type="submit" id="submit-spouse-btn">Добавить</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
+  <script src="script.js"></script>
 </body>
 
 </html>

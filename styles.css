@@ -1,0 +1,131 @@
+/* Base Styles */
+:root {
+    --primary-color: #082d38;
+    --primary-dark: #0b313d;
+    --secondary-color: #f8f9fa;
+    --accent-color: #f57539;
+    --text-color: #1f2022;
+    --text-light: #797c83;
+    --white: white;
+    --black: #1f2022;
+    --gray-dark: #1a1a2e;
+    --gray-light: #e9ecef;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+    --gradient-primary: linear-gradient(135deg, #082d38 0%, #0b313d 100%);
+    --gradient-accent: linear-gradient(135deg, #f57539 0%, #fd4b8b 100%);
+    --gradient-dark: linear-gradient(135deg, #082d38 0%, #0b313d 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+.section-header .underline {
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-accent);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.section-header.light h2 {
+    color: var(--white);
+}
+
+.section-header.light .underline {
+    background: var(--white);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive для общих блоков */
+@media (min-width: 1024px) {
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 48px !important;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 32px !important;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 24px !important;
+    }
+    
+    .section {
+        padding: 20px 0;
+    }
+}
