@@ -2,7 +2,7 @@
 .why-us-section {
   background-color: var(--white);
   position: relative;
-  background-image: url('../assets/images/why-us-bg.avif');
+  background: url('../assets/images/why-us-bg.avif') center/cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
