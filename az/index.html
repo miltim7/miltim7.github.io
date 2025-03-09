@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STREAMLINE - Etibarlı, sürətli və sərfəli</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../css/why-us.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.344.0/dist/umd/lucide.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="/en" class="logo">
+          <img src="../assets/images/logo.png" alt="Logo">
+        </a>
+        <div class="nav-links">
+          <button class="nav-link active" data-target="home">Ana səhifə</button>
+          <button class="nav-link" data-target="about">Şirkət haqqında</button>
+          <button class="nav-link" data-target="why-us">Niyə biz</button>
+          <div class="dropdown">
+            <button class="nav-link" data-target="road-freight">Xidmətlər</button>
+            <div class="dropdown-menu">
+              <a href="#road-freight" class="dropdown-item">Quru daşımaları</a>
+              <a href="#sea-freight" class="dropdown-item">Dəniz daşımaları</a>
+              <a href="#air-freight" class="dropdown-item">Hava daşımaları</a>
+              <a href="#rail-freight" class="dropdown-item">Dəmiryolu daşımaları</a>
+            </div>
+          </div>
+          <button class="contact-btn" data-target="contact">Əlaqə</button>
+          <div class="language-switcher desktop-lang">
+            <select id="lang-switcher-desktop">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="az">AZ</option>
+            </select>
+          </div>
+        </div>
+        <div class="mobile-menu-btn">
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <button class="nav-link active" data-target="home">Ana səhifə</button>
+        <button class="nav-link" data-target="about">Şirkət haqqında</button>
+        <button class="nav-link" data-target="why-us">Niyə biz</button>
+        <button class="nav-link services-toggle">Xidmətlər</button>
+        <div class="services-mobile-menu">
+          <a href="#road-freight" class="service-item nav-link" data-target="road-freight">
+            <img src="../assets/images/landfreight.jpg" alt="Quru daşımaları">
+            <span>Quru daşımaları</span>
+          </a>
+          <a href="#sea-freight" class="service-item nav-link" data-target="sea-freight">
+            <img src="../assets/images/seafreight.jpg" alt="Dəniz daşımaları">
+            <span>Dəniz daşımaları</span>
+          </a>
+          <a href="#air-freight" class="service-item nav-link" data-target="air-freight">
+            <img src="../assets/images/airfreight.jpg" alt="Hava daşımaları">
+            <span>Hava daşımaları</span>
+          </a>
+          <a href="#rail-freight" class="service-item nav-link" data-target="rail-freight">
+            <img src="../assets/images/railway.avif" alt="Dəmiryolu daşımaları">
+            <span>Dəmiryolu daşımaları</span>
+          </a>
+        </div>
+        <button class="contact-btn" data-target="contact">Əlaqə</button>
+        <div class="language-switcher mobile-lang">
+          <select id="lang-switcher-mobile">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="az">AZ</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero Section -->
+  <section id="home" class="hero-section">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="../assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="animate-fadeInDown">İNNOVASİYAL LOGİSTİKA HƏLLƏRİ</h1>
+        <p class="animate-fadeInUp">
+          Biz qabaqcıl texnologiyaları və fərdi yanaşmanı birləşdirərək yükünüzün çatdırılmasının optimal marşrutlarını yaradırıq.
+        </p>
+        <button class="cta-button animate-pulse" data-target="contact">Ərizə buraxın</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 2. About Section -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Şirkət haqqında</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="about-content-wrapper">
+        <div class="about-image">
+          <img src="../assets/images/about1.jpg" alt="Logistika">
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-text">il təcrübə</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-text">müştəri</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-text">daşımalar</span>
+            </div>
+          </div>
+          <img src="../assets/images/about2.jpg" alt="Logistika">
+        </div>
+
+        <div class="about-text">
+          <p class="animate-on-scroll">
+            Biz, kiçik, lakin dinamik inkişaf edən nəqliyyat və ekspediya şirkəti olaraq, yerli bazarda etibarlı şəkildə fəaliyyət göstəririk. Bu müddət ərzində sabit müştəri portfeli yaratdıq və hər bir müştərimiz bizim üçün sadəcə sifarişçi deyil, böyük ailənin bir hissəsidir. Göstərilən etibara yüksək qiymət veririk və hər bir müştərinin diqqət, qayğı və xidmətlərimizin keyfiyyətinə inam hiss etməsini təmin edirik.
+          </p>
+
+          <p class="animate-on-scroll" data-delay="200">
+            Biz başa düşürük ki, logistika yalnız çatdırılma deyil, həm də xərclərin optimallaşdırılması, vaxtın dəqiq riayət edilməsi və qüsursuz xidmət deməkdir. Buna görə sərfəli marşrutlar, elastik şərtlər və düşünülmüş daşımalar strategiyası təklif edirik ki, yalnız yükünüzü deyil, həm də resurslarınızı qoruyasınız.
+          </p>
+
+          <div class="about-quote animate-on-scroll" data-delay="400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="quote-icon">
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+              </path>
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+              </path>
+            </svg>
+            <p>Bizim üçün logistika – müştərilərimizin biznesinə olan məsuliyyətdir.</p>
+          </div>
+
+          <div class="about-values">
+            <div class="value-item">
+              <img src="../assets/icons/shield.gif" class="value-icon">
+              <span>Etibarlılıq</span>
+            </div>
+            <div class="value-item">
+              <img src="../assets/icons/punctuality.gif" class="value-icon">
+              <span>Dakiklik</span>
+            </div>
+            <div class="value-item">
+              <img src="../assets/icons/care.gif" class="value-icon">
+              <span>Qayğı</span>
+            </div>
+            <div class="value-item">
+              <img src="../assets/icons/innovation.gif" class="value-icon">
+              <span>İnnovasiyalar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Why Choose Us Section -->
+  <section id="why-us" class="why-us-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Niyə müştərilərimiz bizi seçirlər</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="features">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">
+            <img src="../assets/icons/shield.gif">
+          </div>
+          <div class="feature-content">
+            <h3>Etibarlılıq və məsuliyyət</h3>
+            <p>
+              Biz yalnız yoxlanılmış daşımacılarla işləyirik; onların təcrübəli peşəkar komandası və etibarlı sığortası, müştərilərimizin yüklərinin və investisiyalarının əlavə müdafiəsini təmin edir.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-delay="100">
+          <div class="feature-icon">
+            <img src="../assets/icons/logistic-solutions.gif">
+          </div>
+          <div class="feature-content">
+            <h3>Optimal logistika həlləri</h3>
+            <p>
+              Biz xərcləri azaltmağa və çatdırılmanı sürətləndirməyə imkan verən effektiv marşrutlar təklif edirik. Elastik əməkdaşlıq şərtləri müştərinin tələblərinə uyğunlaşdırılır.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-delay="200">
+          <div class="feature-icon">
+            <img src="../assets/icons/handshake.gif">
+          </div>
+          <div class="feature-content">
+            <h3>Fərdi yanaşma</h3>
+            <p>
+              Hər bir müştəri bizim üçün sadəcə sifarişçi deyil, həmkar və tərəfdaşdır. Biz, biznesin unikal tələblərini nəzərə alaraq ən yaxşı logistika həllərini seçirik.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-delay="300">
+          <div class="feature-icon">
+            <img src="../assets/icons/transparency.gif">
+          </div>
+          <div class="feature-content">
+            <h3>Şəffaflıq və ədalətli qiymətlər</h3>
+            <p>
+              Müştərilərimiz həmişə nə üçün ödədiklərini bilirlər. Biz açıq və dürüst işləyir, rəqabətli tariflər təqdim edirik.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card animate-on-scroll" data-delay="400">
+          <div class="feature-icon">
+            <img src="../assets/icons/quickness.gif">
+          </div>
+          <div class="feature-content">
+            <h3>Elastiklik və operativlik</h3>
+            <p>
+              Biz müştərilərimizi dəyərləndirir və onların sorğularına tez reaksiya verməyə çalışırıq. Bazar dəyişikliklərini izləyir, yeni şərtlərə uyğunlaşır və müştəriləri vaxtında məlumatlandırırıq.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.1 Road Freight Section -->
+  <section id="road-freight" class="service-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Quru daşımaları</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="service-block animate-on-scroll">
+        <div class="service-image">
+          <img src="../assets/images/landfreight.jpg" alt="Avtomobil daşımaları">
+        </div>
+        <div class="service-header">
+          <div class="service-icon">
+            <img src="../assets/icons/lorry.gif">
+          </div>
+          <h3>Quru daşımaları</h3>
+        </div>
+
+        <div class="service-content">
+          <div class="service-grid">
+            <div class="service-column">
+              <p>
+                Streamline şirkəti, geniş marşrut şəbəkəsi üzərindən beynəlxalq və regional yüklərin daşınmasını həyata keçirir. Daşıma coğrafiyası Avropanın bütün bölgələrini, Rusiyanı, Belarusu, Orta Asiyanı və Türkiyəni əhatə edir.
+              </p>
+              <p>
+                <span class="bold">FTL (Full Truck Load)</span> – yük nəqliyyatının tam yüklənməsi, maksimum sürətli və birbaşa çatdırılmanı təmin edir.
+              </p>
+              <p>
+                İnkişaf etmiş infrastruktur və müasir nəqliyyat həlləri müxtəlif ölçülü, qeyri-standart və ağır yüklərin daşınmasına imkan yaradır. Həmçinin, təhlükəli yüklərin (ADR) daşınması və qida məhsulları üçün temperatur nəzarət rejimi təmin edən soyuducu konteynerlər (REF) vasitəsilə xidmət göstəririk.
+              </p>
+            </div>
+            <div class="service-column">
+              <p>
+                <span class="bold">LTL (Less Than Truckload)</span> – toplu yüklərin daşınması, kiçik göndərişlər üçün optimal həll.
+              </p>
+              <p>
+                Biz, Almaniya, İtaliya, Hollandiya, Polşa kimi Avropanın aparıcı anbardar mərkəzləri ilə əməkdaşlıq edirik. Partnyorlarımız, Birləşmiş Krallıq, Norveç və Baltik ölkələri daxil olmaqla, Avropanın istənilən nöqtəsindən toplu yüklərin çatdırılmasını təmin edirlər.
+              </p>
+              <p>
+                Əlavə olaraq, Türkiyə, Rusiya və Belarusda yüklərin konsolidasiyası (LTL) xidməti mövcuddur ki, bu da logistikanı optimallaşdırmağa və daşınma xərclərini azaltmağa imkan verir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.2 Sea Freight Section -->
+  <section id="sea-freight" class="service-section section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Dəniz daşımaları</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="service-block animate-on-scroll" data-delay="200">
+        <div class="service-image">
+          <img src="../assets/images/seafreight.jpg" alt="Dəniz daşımaları">
+        </div>
+        <div class="service-header">
+          <div class="service-icon">
+            <img src="../assets/icons/freight.gif">
+          </div>
+          <h3>Dəniz daşımaları</h3>
+        </div>
+
+        <div class="service-content">
+          <div class="service-grid">
+            <div class="service-column">
+              <p>
+                Dəniz daşımaları, beynəlxalq yüklərin çatdırılması üçün ən iqtisadi üsuldur, xüsusilə böyük partiyalar üçün. Geniş daşınma coğrafiyası, xərclərin optimallaşdırılması və demək olar ki, hər növ yüklərin daşınması imkanı təmin edir.
+              </p>
+              <p>
+                Streamline şirkəti, əsas beynəlxalq marşrutlar üzrə dəniz daşımalarını təşkil edir. Aparıcı dəniz xətləri ilə sərfəli razılaşmalar və geniş partnyor şəbəkəsi sayəsində rəqabətədavamlı tariflər təqdim olunur və etibarlı, effektiv, optimallaşdırılmış logistika təmin edilir.
+              </p>
+            </div>
+            <div class="service-column">
+              <p>
+                <span class="bold">FCL (Full Container Load)</span> – yüklərin tam yüklənmiş konteynerdə daşınması, maksimal təhlükəsizlik və çatdırılma səmərəliliyini təmin edir. Bu format, təhlükəli (ADR) və qeyri-standart yüklər də daxil olmaqla geniş yük çeşidi üçün uyğundur.
+              </p>
+              <p>
+                <span class="bold">LCL (Less than Container Load)</span> – konsolidasiya (toplama) daşımaları, fərqli göndəricilərdən olan kiçik yüklərin bir konteynerdə birləşdirilməsi ilə nəqliyyat xərclərini azaldır. Konsolidasiyanı asanlaşdırmaq üçün Çin, Vyetnam, Sinqapur, Malayziya, İndoneziya, Yaponiya və həmçinin Avropa və Şimali Amerika ölkələrindəki anbardar istifadə edirik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.3 Air Freight Section -->
+  <section id="air-freight" class="service-section section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hava daşımaları</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="service-block animate-on-scroll" data-delay="400">
+        <div class="service-image">
+          <img src="../assets/images/airfreight.jpg" alt="Hava daşımaları">
+        </div>
+        <div class="service-header">
+          <div class="service-icon">
+            <img src="../assets/icons/plane.gif">
+          </div>
+          <h3>Hava daşımaları</h3>
+        </div>
+
+        <div class="service-content">
+          <p>
+            Hava daşımaları, beynəlxalq yüklərin çatdırılması üçün ən sürətli üsuldur; minimal tranzit müddəti və yüksək təhlükəsizlik səviyyəsi təmin edir. Təcili göndərişlər və baha qiymətli mallar üçün optimal həll təqdim edir.
+          </p>
+          <p>
+            Hava nəqliyyatı, vaxtın və etibarlılığın vacib olduğu hallarda ideal həll yoludur. Streamline, aparıcı hava daşımaları şirkətləri ilə əməkdaşlıq edir, marşrutları optimallaşdırır və çatdırılma prosesini nəzarətdə saxlayaraq yüklərin vaxtında və tam qorunmuş şəkildə təslim olunmasını təmin edir.
+          </p>
+          <p>
+            Biz başa düşürük ki, hava daşımaları ən baha nəqliyyat növlərindən biridir, buna görə də bir neçə hava şirkətindən təkliflər alaraq müştərilərə ən sərfəli şərtləri təqdim edirik – keyfiyyətdən və çatdırılma sürətindən ödün vermədən.
+          </p>
+          <p>
+            Həmçinin təhlükəli yüklərin (DGR) və temperatur nəzarətində olan yüklərin (AVI/PHARMA/FOOD) daşınması da mümkündür.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.4 Rail Freight Section -->
+  <section id="rail-freight" class="service-section section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Dəmiryolu daşımaları</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="service-block animate-on-scroll" data-delay="600">
+        <div class="service-image">
+          <img src="../assets/images/railway.avif" alt="Dəmiryolu daşımaları">
+        </div>
+        <div class="service-header">
+          <div class="service-icon">
+            <img src="../assets/icons/rail.gif">
+          </div>
+          <h3>Dəmiryolu daşımaları</h3>
+        </div>
+
+        <div class="service-content">
+          <p>
+            Dəmiryolu daşımaları, uzun məsafələrə yüklərin çatdırılması üçün etibarlı və sərfəli həll yoludur. Yüksək yükləmə qabiliyyəti, cədvəlin sabitliyi və xərclərin optimallaşdırılması xüsusilə böyük partiyalar üçün təmin edilir.
+          </p>
+          <p>
+            Streamline şirkəti, Avropa, Çin, Rusiya, Belarus və Orta Asiya daxil olmaqla əsas beynəlxalq marşrutlar üzrə dəmiryolu daşımaları təklif edir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact Section -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Bizimlə əlaqə saxlayın</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="contact-form-container animate-on-scroll">
+        <form class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Ad</label>
+              <input type="text" id="name" placeholder="Adınız">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Emailiniz">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Mövzu</label>
+            <input type="text" id="subject" placeholder="Mesajın mövzusu">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mesaj</label>
+            <textarea id="message" rows="5" placeholder="Mesajınız"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Sorğunu göndər</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>STREAMLINE</h3>
+          <p>
+            Biz, biznesiniz üçün etibarlı logistika həlləri təklif edirik. Vaxtınızı və büdcənizi qoruyuruq.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Əlaqə</h3>
+          <p>Email: info@streamline-logistics.com</p>
+          <p>Telefon: +994 99 999 99 99</p>
+          <p>Ünvan: Address</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>İş saatları</h3>
+          <p>Bazar ertəsi - Cümə: 9:00 - 18:00</p>
+          <p>Şənbə - Bazar: Bağlı</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> STREAMLINE. Bütün hüquqlar qorunur.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
