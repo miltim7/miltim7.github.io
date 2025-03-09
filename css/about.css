@@ -61,6 +61,14 @@
   z-index: 2;
 }
 
+@media (max-width: 500px) {
+  .about-stats {
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px 0;
+  }
+}
+
 .stat-item {
   text-align: center;
 }
@@ -150,6 +158,12 @@
 .value-item span {
   font-weight: 600;
   color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
 }
 
 @media (min-width: 768px) {

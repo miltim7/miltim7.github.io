@@ -24,6 +24,7 @@
 
   .language-switcher.mobile-lang {
     margin-top: 20px;
+    margin-left: 0;
     justify-content: center;
   }
 }
@@ -175,13 +176,33 @@
   transition: background 0.3s ease;
 }
 
+/* Анимированное мобильное меню */
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 70px; /* значение обновляется через JS */
+  left: 0;
+  right: 0;
+  height: calc(100vh - 70px);
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 30px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 
 .mobile-menu .nav-link {
   padding: 12px 0;
