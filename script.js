@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   updateNavbarTransparency();
   window.addEventListener('scroll', updateNavbarTransparency);
-
   function openMobileMenu() {
     if (navbar) {
       const navbarHeight = navbar.offsetHeight;
@@ -61,12 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.overflow = 'hidden';
     }
   }
-
   function closeMobileMenu() {
     mobileMenu.classList.remove('open');
     document.body.style.overflow = '';
   }
-
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', function () {
       document.body.classList.toggle('menu-open');
@@ -77,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
   window.addEventListener('resize', function () {
     if (mobileMenu.classList.contains('open') && navbar) {
       const navbarHeight = navbar.offsetHeight;
@@ -85,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenu.style.height = `calc(100vh - ${navbarHeight}px)`;
     }
   });
-
   const scrollLinks = document.querySelectorAll('[data-target]');
   scrollLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -107,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
   const featureItems = document.querySelectorAll('.feature-item');
   featureItems.forEach(item => {
     const header = item.querySelector('.feature-header');
@@ -123,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
   if (animatedElements.length > 0) {
     const observer = new IntersectionObserver((entries) => {
@@ -142,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(element);
     });
   }
-
   function updateActiveLink(sectionId) {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -153,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
   window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY + window.innerHeight / 3;
     const sections = document.querySelectorAll('section');
@@ -165,16 +156,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+      const messages = {
+        ru: 'Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.',
+        az: 'Təşəkkür edirik! Tezliklə sizinlə əlaqə saxlayacağıq.',
+        en: 'Thank you for your submission! We will contact you shortly.'
+      };
+      alert(messages[currentLang]);
       contactForm.reset();
     });
   }
-
   window.addEventListener('scroll', function () {
     const scrollPosition = window.pageYOffset;
     const aboutSection = document.querySelector('.about-section');
@@ -210,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
   const serviceBlocks = document.querySelectorAll('.service-block');
   serviceBlocks.forEach(block => {
     block.addEventListener('mouseenter', function () {
@@ -222,7 +215,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.05)';
     });
   });
-
   const serviceIcons = document.querySelectorAll('.service-icon');
   serviceIcons.forEach(icon => {
     icon.addEventListener('mouseenter', function () {
@@ -232,7 +224,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.transform = 'scale(1) rotate(0)';
     });
   });
-
   const servicesToggle = document.querySelector('.mobile-menu .services-toggle');
   const servicesMobileMenu = document.querySelector('.mobile-menu .services-mobile-menu');
   if (servicesToggle && servicesMobileMenu) {

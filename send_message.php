@@ -32,7 +32,7 @@ $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $subject = "Новое сообщение из сайта STREAMLINE";
 
 if (mail($to, $subject, $body, $headers)) {
-    echo '<script>alert("The message was sent successfully");</script>';
+    // echo '<script>alert("The message was sent successfully");</script>';
     header("Location: /");
     exit;
 } else {

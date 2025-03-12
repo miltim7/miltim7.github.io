@@ -46,7 +46,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .form-group {
@@ -99,18 +99,23 @@
   box-shadow: 0 8px 25px rgba(245, 117, 57, 0.4);
 }
 
-/* Responsive для Contact */
 @media (min-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Мобильная версия: уменьшаем отступы */
+@media (max-width: 768px) {
+  .form-grid {
+    gap: 0px;
+  }
+}
+
 @media (max-width: 576px) {
   .contact-form-container {
     padding: 0 10px;
   }
+
   .contact-form {
     padding: 20px;
   }
