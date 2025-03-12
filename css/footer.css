@@ -1,57 +1,70 @@
-/* Footer */
 .footer {
-    background: var(--black);
-    color: var(--white);
-    padding: 80px 0 30px;
-  }
-  
+  background: var(--black);
+  color: var(--white);
+  padding: 80px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer a img {
+  height: 35px;
+  width: 35px;
+}
+
+.footer-column h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.footer-column p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+/* Responsive для Footer */
+@media (min-width: 768px) {
   .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .footer-column h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .footer-column h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: var(--accent-color);
-    border-radius: 2px;
-  }
-  
-  .footer-column p {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 15px;
-    line-height: 1.7;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    text-align: center;
-  }
-  
-  .footer-bottom p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
-  }
-  
-  /* Responsive для Footer */
-  @media (min-width: 768px) {
-    .footer-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
+}

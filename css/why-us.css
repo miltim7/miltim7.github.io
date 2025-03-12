@@ -1,11 +1,92 @@
-/* Why Choose Us Section */
 .why-us-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--white);
   position: relative;
   background: url('../assets/images/why-us-bg.avif') center/cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1200px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg2.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg3.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 850px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg4.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 700px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg5.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 650px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg6.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 550px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg7.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 450px) {
+  .why-us-section {
+    background: url('../assets/images/why-us-bg8.jpg') center/cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }
 
 .why-us-section::before {

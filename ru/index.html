@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <title>STREAMLINE - Надёжно, быстро и выгодно</title>
   
@@ -455,34 +455,39 @@
   <section id="contact" class="contact-section section">
     <div class="container">
       <div class="section-header light">
-        <h2>Свяжитесь с нами</h2>
+        <h2>Связаться</h2>
         <span class="underline"></span>
       </div>
 
       <div class="contact-form-container animate-on-scroll">
-        <form class="contact-form">
+        <form method="post" action="../send_message.php" class="contact-form">
           <div class="form-grid">
             <div class="form-group">
               <label for="name">Имя</label>
-              <input type="text" id="name" placeholder="Ваше имя">
+              <input name="name" type="text" id="name" placeholder="Ваше имя">
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Ваш email">
+              <input name="email" type="email" id="email" placeholder="Ваш email">
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Номер телефона</label>
+            <input name="phone" type="text" id="subject" placeholder="Ваш номер телефона">
           </div>
 
           <div class="form-group">
             <label for="subject">Тема</label>
-            <input type="text" id="subject" placeholder="Тема сообщения">
+            <input name="theme" type="text" id="subject" placeholder="Тема сообщения">
           </div>
 
           <div class="form-group">
             <label for="message">Сообщение</label>
-            <textarea id="message" rows="5" placeholder="Ваше сообщение"></textarea>
+            <textarea name="message" id="message" rows="5" placeholder="Ваше сообщение"></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">Отправить заявку</button>
+          <button type="submit" class="submit-btn">Send request</button>
         </form>
       </div>
     </div>
@@ -497,13 +502,15 @@
           <p>
             Надёжные логистические решения для вашего бизнеса. Мы бережём ваши сроки и бюджет.
           </p>
+          <a href="https://wa.me/994558360072" target="_blank">Напишите нам <img src="../assets/icons/whatsapp.gif"></a>
+          <a href="tel:+994558360072" target="_blank">Позвоните нам <img src="../assets/icons/phonecall.gif"></a>
         </div>
 
         <div class="footer-column">
           <h3>Контакты</h3>
-          <p>Email: info@streamline-logistics.com</p>
-          <p>Телефон: +994 99 999 99 99</p>
-          <p>Адрес: Address</p>
+          <p>Email: info@streamline.az</p>
+          <p>Телефон: +994 55 836 00 72</p>
+          <p>Адрес: AZ1025, Bakı şəhəri, Afiyəddin Cəlilov küç, 27A. Azərbaycan.</p>
         </div>
 
         <div class="footer-column">
