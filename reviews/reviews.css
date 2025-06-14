@@ -1,0 +1,414 @@
+/* reviews\reviews.css */
+
+.reviews {
+    background-color: #001a23;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #b3efb2, #7a9e7e, #31493c);
+}
+
+.reviews-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Заголовок секции */
+.reviews-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.reviews-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #b3efb2;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #7a9e7e;
+    border-radius: 2px;
+}
+
+.reviews-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #e8f1f2;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Обертка карусели */
+.reviews-carousel-wrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+/* Карусель отзывов */
+.reviews-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: none;
+    overscroll-behavior-x: contain;
+    /* УБИРАЕМ скроллбар на всех устройствах */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Курсор для drag */
+    cursor: grab;
+    user-select: none;
+}
+
+/* Скрываем скроллбар полностью */
+.reviews-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Курсор при перетаскивании */
+.reviews-carousel.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto; /* Убираем плавность во время drag */
+}
+
+/* Карточка отзыва */
+.review-card {
+    background: linear-gradient(135deg, #31493c 0%, #001a23 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 26, 35, 0.3);
+    transition: all 0.3s ease;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 350px;
+    min-width: 350px;
+}
+
+.review-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(179, 239, 178, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.review-card:hover::before {
+    left: 100%;
+}
+
+.review-card:hover {
+    box-shadow: 0 20px 50px rgba(179, 239, 178, 0.15);
+    border-color: #7a9e7e;
+}
+
+/* Звездочки */
+.review-stars {
+    color: #b3efb2;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Текст отзыва */
+.review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e8f1f2;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+.review-text::before {
+    content: '"';
+    position: absolute;
+    left: -0.5rem;
+    top: -0.2rem;
+    font-size: 2rem;
+    color: #7a9e7e;
+    font-family: serif;
+}
+
+.review-text::after {
+    content: '"';
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0;
+    font-size: 2rem;
+    color: #7a9e7e;
+    font-family: serif;
+}
+
+/* Автор отзыва */
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(122, 158, 126, 0.2);
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #001a23;
+    border: 2px solid #e8f1f2;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover .author-avatar {
+    transform: scale(1.05);
+    border-color: #b3efb2;
+}
+
+.author-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.author-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #b3efb2;
+    margin-bottom: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: break-word;
+}
+
+.author-position {
+    font-size: 0.85rem;
+    color: #7a9e7e;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Навигация */
+.reviews-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.reviews-btn {
+    background-color: #7a9e7e;
+    color: #e8f1f2;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(122, 158, 126, 0.3);
+}
+
+.reviews-btn:hover {
+    background-color: #b3efb2;
+    color: #001a23;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(179, 239, 178, 0.4);
+}
+
+.reviews-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* АДАПТИВНОСТЬ */
+
+/* Планшеты */
+@media (max-width: 1023px) {
+    .reviews {
+        padding: 4rem 0;
+    }
+    
+    .reviews-container {
+        padding: 0 4%;
+    }
+    
+    .review-card {
+        width: 320px;
+        min-width: 320px;
+        padding: 1.8rem;
+        min-height: 300px;
+    }
+    
+    .reviews-carousel {
+        gap: 1.5rem;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 767px) {
+    .reviews {
+        padding: 3rem 0;
+    }
+    
+    .reviews-container {
+        padding: 0 3%;
+    }
+    
+    .reviews-header {
+        margin-bottom: 3rem;
+    }
+    
+    .review-card {
+        width: 300px;
+        min-width: 300px;
+        padding: 1.5rem;
+        min-height: 280px;
+    }
+    
+    .reviews-carousel {
+        gap: 1rem;
+        margin: 0 -0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .review-text {
+        font-size: 0.95rem;
+    }
+    
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .author-name {
+        font-size: 0.95rem;
+    }
+    
+    .author-position {
+        font-size: 0.8rem;
+    }
+    
+    .reviews-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 479px) {
+    .reviews-container {
+        padding: 0 2%;
+    }
+    
+    .review-card {
+        width: 280px;
+        min-width: 280px;
+        padding: 1.2rem;
+        min-height: 260px;
+    }
+    
+    .review-text {
+        font-size: 0.9rem;
+    }
+    
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .author-name {
+        font-size: 0.9rem;
+    }
+    
+    .author-position {
+        font-size: 0.75rem;
+    }
+    
+    .reviews-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Анимации появления */
+.reviews-title {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reviews-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reviews-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.2s;
+}
+
+.reviews-subtitle.animate {
+    opacity: 0.9;
+    transform: translateY(0);
+}
+
+/* Улучшения для touch устройств */
+@media (hover: none) {
+    .review-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}

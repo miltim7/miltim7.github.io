@@ -1,0 +1,425 @@
+/* header\header.css */
+
+.header {
+    background-color: transparent; /* Изначально прозрачный */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none; /* Убираем тень для прозрачного состояния */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(0px); /* Изначально без размытия */
+}
+
+/* Состояние header после прокрутки */
+.header.scrolled {
+    background-color: rgba(0, 26, 35, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 26, 35, 0.4);
+}
+
+/* Дополнительный класс для полной непрозрачности */
+.header.solid {
+    background-color: #001a23;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 4px 20px rgba(0, 26, 35, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 70px;
+    transition: all 0.4s ease;
+}
+
+/* Основной контент - отступ от header */
+.main-content {
+    margin-top: 0; /* Убираем отступ, так как hero на весь экран */
+    min-height: 100vh;
+}
+
+/* Демо секция */
+.demo-section {
+    padding: 2rem 5%;
+    background: #e8f1f2;
+    min-height: 50vh;
+    margin-top: 0; /* Убираем отступ */
+}
+
+/* Логотип */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #b3efb2;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 26, 35, 0.8); /* Добавляем тень для читаемости на прозрачном фоне */
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(179, 239, 178, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.logo:hover::before {
+    left: 100%;
+}
+
+.logo:hover {
+    color: #e8f1f2;
+    transform: scale(1.05);
+}
+
+/* Убираем тень с логотипа когда header непрозрачный */
+.header.scrolled .logo,
+.header.solid .logo {
+    text-shadow: none;
+}
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #7a9e7e;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-shadow: 0 1px 4px rgba(0, 26, 35, 0.6); /* Тень для читаемости */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #b3efb2;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #e8f1f2;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Активная ссылка */
+.nav-link.active {
+    color: #b3efb2;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Убираем тень с навигации когда header непрозрачный */
+.header.scrolled .nav-link,
+.header.solid .nav-link {
+    text-shadow: none;
+}
+
+/* Кнопка "Оставить заявку" */
+.cta-button {
+    background-color: rgba(49, 73, 60, 0.9); /* Слегка прозрачная изначально */
+    color: #e8f1f2;
+    padding: 0.8rem 2rem;
+    border: 2px solid rgba(49, 73, 60, 0.9);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(49, 73, 60, 0.4);
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+}
+
+/* Кнопка в непрозрачном состоянии */
+.header.scrolled .cta-button,
+.header.solid .cta-button {
+    background-color: #31493c;
+    border-color: #31493c;
+    backdrop-filter: none;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #7a9e7e;
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 0;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(122, 158, 126, 0.4);
+    border-color: #7a9e7e;
+    color: #001a23;
+}
+
+/* Бургер меню */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #7a9e7e;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 26, 35, 0.5); /* Тень для видимости на прозрачном фоне */
+}
+
+.hamburger:hover span {
+    background-color: #b3efb2;
+}
+
+/* Убираем тень с бургера когда header непрозрачный */
+.header.scrolled .hamburger span,
+.header.solid .hamburger span {
+    box-shadow: none;
+}
+
+/* Анимация бургера */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    background-color: #e8f1f2;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    background-color: #e8f1f2;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 26, 35, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu .nav-link {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.4s ease;
+    text-shadow: none; /* В мобильном меню тень не нужна */
+}
+
+.mobile-menu.active .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-menu .nav-link:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu .nav-link:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu .nav-link:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu .nav-link:nth-child(4) { transition-delay: 0.4s; }
+.mobile-menu .nav-link:nth-child(5) { transition-delay: 0.5s; }
+
+.mobile-menu .cta-button {
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease 0.6s;
+    background-color: #31493c;
+    border-color: #31493c;
+    backdrop-filter: none;
+}
+
+.mobile-menu.active .cta-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность с постепенным уменьшением */
+
+/* Большие экраны (1200px и выше) */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 1rem 4%;
+    }
+    
+    .nav-menu {
+        gap: 2rem;
+    }
+    
+    .nav-link {
+        font-size: 0.95rem;
+    }
+    
+    .demo-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+/* Средние экраны (1024px) - ПЕРЕХОД НА МОБИЛЬНУЮ ВЕРСИЮ */
+@media (max-width: 1024px) {
+    .nav-menu,
+    .desktop-only {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+}
+
+/* Планшеты (768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .demo-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+/* Маленькие планшеты (640px) */
+@media (max-width: 640px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu .nav-link {
+        font-size: 1.4rem;
+        margin: 1.2rem 0;
+    }
+    
+    .demo-section {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+/* Мобильные устройства (480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem 3%;
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .mobile-menu .nav-link {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+    }
+
+    .mobile-menu .cta-button {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Очень маленькие экраны (360px) */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.8rem 2%;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2px;
+    }
+
+    .mobile-menu .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

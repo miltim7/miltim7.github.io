@@ -1,0 +1,1475 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Pro - Разработка сайтов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header/header.css">
+    <link rel="stylesheet" href="hero/hero.css">
+    <link rel="stylesheet" href="services/services.css">
+    <link rel="stylesheet" href="advantages/advantages.css">
+    <link rel="stylesheet" href="portfolio/portfolio.css">
+    <link rel="stylesheet" href="reviews/reviews.css">
+    <link rel="stylesheet" href="contact/contact.css">
+    <link rel="stylesheet" href="footer/footer.css">
+</head>
+
+<body>
+    <noscript>
+        <style>
+            body {
+                cursor: auto !important;
+            }
+
+            .cursor,
+            .cursor-ring {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+
+    <!-- HEADER NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <!-- Логотип -->
+            <a href="/" class="logo">WebDev Pro</a>
+
+            <!-- Основное меню (десктоп) -->
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">Главная</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#advantages" class="nav-link">Преимущества</a></li>
+                <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+
+            <!-- Кнопка CTA (скрывается на мобильных) -->
+            <a href="#contact" class="cta-button desktop-only">Оставить заявку</a>
+
+            <!-- Бургер меню -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="nav-link">Главная</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#advantages" class="nav-link">Преимущества</a>
+            <a href="#portfolio" class="nav-link">Портфолио</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+            <a href="#contact" class="cta-button">Оставить заявку</a>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="main-content">
+        <!-- HERO БЛОК -->
+        <section class="hero" id="hero">
+            <!-- Видео фон -->
+            <div class="hero-video">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/videos/hero.mp4" type="video/mp4">
+                    <!-- Фоллбэк для браузеров без поддержки видео -->
+                    <div class="video-fallback"></div>
+                </video>
+                <!-- Оверлей для затемнения видео -->
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Контент Hero -->
+            <div class="hero-content">
+                <div class="hero-text-container" id="heroText">
+                    <h1 class="hero-title">
+                        <span class="hero-word" data-text="СОЗДАЕМ">СОЗДАЕМ</span>
+                        <span class="hero-word" data-text="СОВРЕМЕННЫЕ">СОВРЕМЕННЫЕ</span>
+                        <span class="hero-word" data-text="САЙТЫ">САЙТЫ</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Профессиональная разработка веб-сайтов<br>
+                        с современными технологиями и креативным дизайном
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="hero-btn primary">Начать проект</a>
+                        <a href="#portfolio" class="hero-btn secondary">Наши работы</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Декоративные элементы -->
+            <div class="hero-decorations">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
+        </section>
+
+        <!-- SERVICES БЛОК -->
+        <section class="services" id="services">
+            <div class="services-container">
+                <!-- Заголовок секции -->
+                <div class="services-header">
+                    <h2 class="services-title">Что мы делаем</h2>
+                    <p class="services-subtitle">
+                        Создаем цифровые решения, которые работают на ваш бизнес
+                    </p>
+                </div>
+
+                <!-- Обертка для слайдера -->
+                <div class="services-wrapper">
+                    <!-- Карточки услуг - Десктопная версия -->
+                    <div class="services-grid">
+                        <!-- Лендинг -->
+                        <div class="service-card" data-service="landing">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 3H21V7H3V3Z" stroke="currentColor" stroke-width="2" />
+                                    <path d="M3 11H21V15H3V11Z" stroke="currentColor" stroke-width="2" />
+                                    <path d="M8 19H16V21H8V19Z" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="12" cy="12" r="2" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Лендинг</h3>
+                                <p class="service-description">
+                                    Продающие одностраничные сайты с высокой конверсией
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">Адаптивный дизайн</span>
+                                    <span class="feature">SEO-оптимизация</span>
+                                    <span class="feature">Быстрая загрузка</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">25 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+
+                        <!-- Корпоративный сайт -->
+                        <div class="service-card" data-service="corporate">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M9 9H15" stroke="currentColor" stroke-width="2" />
+                                    <path d="M9 13H15" stroke="currentColor" stroke-width="2" />
+                                    <path d="M9 17H13" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Корпоративный сайт</h3>
+                                <p class="service-description">
+                                    Представительские сайты для серьезного бизнеса
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">CMS система</span>
+                                    <span class="feature">Мультиязычность</span>
+                                    <span class="feature">Интеграции</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">45 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+
+                        <!-- Интернет-магазин -->
+                        <div class="service-card" data-service="ecommerce">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M17 13H7"
+                                        stroke="currentColor" stroke-width="2" />
+                                    <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Интернет-магазин</h3>
+                                <p class="service-description">
+                                    Полнофункциональные платформы для онлайн-продаж
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">Каталог товаров</span>
+                                    <span class="feature">Платежи</span>
+                                    <span class="feature">Аналитика</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">80 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+
+                        <!-- Дизайн и адаптация -->
+                        <div class="service-card" data-service="design">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" />
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" />
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Дизайн и адаптация</h3>
+                                <p class="service-description">
+                                    Современный UI/UX дизайн и адаптивная верстка
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">UI/UX дизайн</span>
+                                    <span class="feature">Прототипирование</span>
+                                    <span class="feature">Верстка</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">15 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+
+                        <!-- Поддержка и развитие -->
+                        <div class="service-card" data-service="support">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                        stroke="currentColor" stroke-width="2" />
+                                    <path d="M8 14S9 16 12 16S16 14 16 14" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="9" cy="9" r="1" fill="currentColor" />
+                                    <circle cx="15" cy="9" r="1" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Поддержка и развитие</h3>
+                                <p class="service-description">
+                                    Техническое сопровождение и развитие проектов
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">Обновления</span>
+                                    <span class="feature">Безопасность</span>
+                                    <span class="feature">Оптимизация</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">5 000</span>
+                                    <span class="price-currency">₽/мес</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+
+                        <!-- Индивидуальная разработка -->
+                        <div class="service-card" data-service="custom">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M14.7 6.3L18 2.5L22 6.5L17.4 11.1" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M8.5 10.5L18.5 20.5L2.5 21.5L3.5 5.5L13.5 15.5" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-name">Индивидуальная разработка</h3>
+                                <p class="service-description">
+                                    Уникальные решения под специфические задачи
+                                </p>
+                                <div class="service-features">
+                                    <span class="feature">Под ключ</span>
+                                    <span class="feature">API интеграции</span>
+                                    <span class="feature">Масштабируемость</span>
+                                </div>
+                                <div class="service-price">
+                                    <span class="price-from">от</span>
+                                    <span class="price-value">100 000</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="service-overlay"></div>
+                        </div>
+                    </div>
+
+                    <!-- Слайдер для мобильной версии -->
+                    <div class="services-slider">
+                        <div class="services-track">
+                            <!-- Дублируем все карточки для слайдера -->
+                            <!-- Лендинг -->
+                            <div class="service-card" data-service="landing">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 3H21V7H3V3Z" stroke="currentColor" stroke-width="2" />
+                                        <path d="M3 11H21V15H3V11Z" stroke="currentColor" stroke-width="2" />
+                                        <path d="M8 19H16V21H8V19Z" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="12" cy="12" r="2" fill="currentColor" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Лендинг</h3>
+                                    <p class="service-description">
+                                        Продающие одностраничные сайты с высокой конверсией
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">Адаптивный дизайн</span>
+                                        <span class="feature">SEO-оптимизация</span>
+                                        <span class="feature">Быстрая загрузка</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">25 000</span>
+                                        <span class="price-currency">₽</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+
+                            <!-- Корпоративный сайт -->
+                            <div class="service-card" data-service="corporate">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M9 9H15" stroke="currentColor" stroke-width="2" />
+                                        <path d="M9 13H15" stroke="currentColor" stroke-width="2" />
+                                        <path d="M9 17H13" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Корпоративный сайт</h3>
+                                    <p class="service-description">
+                                        Представительские сайты для серьезного бизнеса
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">CMS система</span>
+                                        <span class="feature">Мультиязычность</span>
+                                        <span class="feature">Интеграции</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">45 000</span>
+                                        <span class="price-currency">₽</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+
+                            <!-- Интернет-магазин -->
+                            <div class="service-card" data-service="ecommerce">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M17 13H7"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Интернет-магазин</h3>
+                                    <p class="service-description">
+                                        Полнофункциональные платформы для онлайн-продаж
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">Каталог товаров</span>
+                                        <span class="feature">Платежи</span>
+                                        <span class="feature">Аналитика</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">80 000</span>
+                                        <span class="price-currency">₽</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+
+                            <!-- Дизайн и адаптация -->
+                            <div class="service-card" data-service="design">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" />
+                                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" />
+                                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Дизайн и адаптация</h3>
+                                    <p class="service-description">
+                                        Современный UI/UX дизайн и адаптивная верстка
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">UI/UX дизайн</span>
+                                        <span class="feature">Прототипирование</span>
+                                        <span class="feature">Верстка</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">15 000</span>
+                                        <span class="price-currency">₽</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+
+                            <!-- Поддержка и развитие -->
+                            <div class="service-card" data-service="support">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M8 14S9 16 12 16S16 14 16 14" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="9" cy="9" r="1" fill="currentColor" />
+                                        <circle cx="15" cy="9" r="1" fill="currentColor" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Поддержка и развитие</h3>
+                                    <p class="service-description">
+                                        Техническое сопровождение и развитие проектов
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">Обновления</span>
+                                        <span class="feature">Безопасность</span>
+                                        <span class="feature">Оптимизация</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">5 000</span>
+                                        <span class="price-currency">₽/мес</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+
+                            <!-- Индивидуальная разработка -->
+                            <div class="service-card" data-service="custom">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M14.7 6.3L18 2.5L22 6.5L17.4 11.1" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M8.5 10.5L18.5 20.5L2.5 21.5L3.5 5.5L13.5 15.5" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="service-content">
+                                    <h3 class="service-name">Индивидуальная разработка</h3>
+                                    <p class="service-description">
+                                        Уникальные решения под специфические задачи
+                                    </p>
+                                    <div class="service-features">
+                                        <span class="feature">Под ключ</span>
+                                        <span class="feature">API интеграции</span>
+                                        <span class="feature">Масштабируемость</span>
+                                    </div>
+                                    <div class="service-price">
+                                        <span class="price-from">от</span>
+                                        <span class="price-value">100 000</span>
+                                        <span class="price-currency">₽</span>
+                                    </div>
+                                </div>
+                                <div class="service-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Навигация слайдера -->
+                    <div class="slider-navigation">
+                        <button class="slider-btn prev" aria-label="Предыдущий слайд">‹</button>
+                        <button class="slider-btn next" aria-label="Следующий слайд">›</button>
+                    </div>
+
+                    <!-- Индикаторы слайдера -->
+                    <div class="slider-dots"></div>
+
+                    <!-- Счетчик слайдов -->
+                    <div class="slider-counter"></div>
+                </div>
+
+                <!-- CTA секция -->
+                <div class="services-cta">
+                    <h3 class="cta-title">Не нашли подходящую услугу?</h3>
+                    <p class="cta-description">Обсудим ваш проект и предложим индивидуальное решение</p>
+                    <a href="#contact" class="cta-button-services">Получить консультацию</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVANTAGES БЛОК -->
+        <section class="advantages" id="advantages">
+            <div class="advantages-container">
+                <!-- Заголовок секции -->
+                <div class="advantages-header">
+                    <h2 class="advantages-title">Почему выбирают нас</h2>
+                    <p class="advantages-subtitle">
+                        Профессиональный подход и современные технологии для достижения ваших целей
+                    </p>
+                </div>
+
+                <!-- Обертка для слайдера -->
+                <div class="advantages-wrapper">
+                    <!-- Сетка преимуществ - Десктопная версия -->
+                    <div class="advantages-grid">
+                        <!-- Быстрая разработка -->
+                        <div class="advantage-card" data-advantage="speed">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">Быстрая разработка</h3>
+                                <p class="advantage-description">
+                                    Сдаем проекты в срок благодаря отлаженным процессам и современным инструментам
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Адаптивный дизайн -->
+                        <div class="advantage-card" data-advantage="responsive">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="4" width="20" height="12" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <rect x="8" y="18" width="8" height="2" rx="1" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M12 16V18" stroke="currentColor" stroke-width="2" />
+                                    <rect x="17" y="6" width="2" height="8" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">Адаптивный дизайн</h3>
+                                <p class="advantage-description">
+                                    Ваш сайт идеально работает на всех устройствах — от смартфонов до больших мониторов
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- БЭМ методология -->
+                        <div class="advantage-card" data-advantage="bem">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 2V22" stroke="currentColor" stroke-width="2" />
+                                    <path d="M16 2V22" stroke="currentColor" stroke-width="2" />
+                                    <path d="M3 12H21" stroke="currentColor" stroke-width="2" />
+                                    <path d="M3 6H21" stroke="currentColor" stroke-width="2" />
+                                    <path d="M3 18H21" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">БЭМ методология</h3>
+                                <p class="advantage-description">
+                                    Чистый, структурированный код, который легко поддерживать и развивать
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- SEO-оптимизация -->
+                        <div class="advantage-card" data-advantage="seo">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+                                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" />
+                                    <path d="M11 8V14" stroke="currentColor" stroke-width="2" />
+                                    <path d="M8 11H14" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">SEO-оптимизация</h3>
+                                <p class="advantage-description">
+                                    Настраиваем сайт для поисковых систем, чтобы ваши клиенты легко вас находили
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Техподдержка 24/7 -->
+                        <div class="advantage-card" data-advantage="support">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
+                                        stroke="currentColor" stroke-width="2" />
+                                    <path d="M8 12H16" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 8V16" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">Техподдержка 24/7</h3>
+                                <p class="advantage-description">
+                                    Оперативно решаем любые вопросы и помогаем в развитии вашего проекта
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Современные технологии -->
+                        <div class="advantage-card" data-advantage="technologies">
+                            <div class="advantage-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                    <path
+                                        d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606L20.014 18.9606C20.0871 19.3516 19.9546 19.7563 19.6675 20.0241C19.3805 20.2918 18.9768 20.3824 18.6075 20.2668L15.6075 19.2668C15.2831 19.1711 14.9349 19.2005 14.635 19.35L12.635 20.35C12.2668 20.5324 11.7332 20.5324 11.365 20.35L9.365 19.35C9.06513 19.2005 8.71685 19.1711 8.39254 19.2668L5.39254 20.2668C5.02323 20.3824 4.61952 20.2918 4.33249 20.0241C4.04546 19.7563 3.91287 19.3516 3.986 18.9606L4.714 15.9606C4.77284 15.6362 4.73312 15.3016 4.6 15L2.6 12C2.41765 11.6318 2.41765 11.0982 2.6 10.73L4.6 9C4.73312 8.69842 4.77284 8.36379 4.714 8.03942L3.986 5.03942C3.91287 4.64842 4.04546 4.24371 4.33249 3.97594C4.61952 3.70818 5.02323 3.61755 5.39254 3.73319L8.39254 4.73319C8.71685 4.82886 9.06513 4.79947 9.365 4.65L11.365 3.65C11.7332 3.46765 12.2668 3.46765 12.635 3.65L14.635 4.65C14.9349 4.79947 15.2831 4.82886 15.6075 4.73319L18.6075 3.73319C18.9768 3.61755 19.3805 3.70818 19.6675 3.97594C19.9546 4.24371 20.0871 4.64842 20.014 5.03942L19.286 8.03942C19.2272 8.36379 19.2669 8.69842 19.4 9L21.4 10.73C21.5824 11.0982 21.5824 11.6318 21.4 12L19.4 15Z"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="advantage-content">
+                                <h3 class="advantage-name">Современные технологии</h3>
+                                <p class="advantage-description">
+                                    Используем актуальные инструменты и фреймворки для создания надежных решений
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайдер для мобильной версии -->
+                    <div class="advantages-slider">
+                        <div class="advantages-track">
+                            <!-- Дублируем все карточки для слайдера -->
+                            <div class="advantage-card" data-advantage="speed">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor"
+                                            stroke-width="2" fill="currentColor" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">Быстрая разработка</h3>
+                                    <p class="advantage-description">
+                                        Сдаем проекты в срок благодаря отлаженным процессам и современным инструментам
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card" data-advantage="responsive">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <rect x="2" y="4" width="20" height="12" rx="2" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <rect x="8" y="18" width="8" height="2" rx="1" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M12 16V18" stroke="currentColor" stroke-width="2" />
+                                        <rect x="17" y="6" width="2" height="8" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">Адаптивный дизайн</h3>
+                                    <p class="advantage-description">
+                                        Ваш сайт идеально работает на всех устройствах — от смартфонов до больших
+                                        мониторов
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card" data-advantage="bem">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M8 2V22" stroke="currentColor" stroke-width="2" />
+                                        <path d="M16 2V22" stroke="currentColor" stroke-width="2" />
+                                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" />
+                                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" />
+                                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">БЭМ методология</h3>
+                                    <p class="advantage-description">
+                                        Чистый, структурированный код, который легко поддерживать и развивать
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card" data-advantage="seo">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+                                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" />
+                                        <path d="M11 8V14" stroke="currentColor" stroke-width="2" />
+                                        <path d="M8 11H14" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">SEO-оптимизация</h3>
+                                    <p class="advantage-description">
+                                        Настраиваем сайт для поисковых систем, чтобы ваши клиенты легко вас находили
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card" data-advantage="support">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M8 12H16" stroke="currentColor" stroke-width="2" />
+                                        <path d="M12 8V16" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">Техподдержка 24/7</h3>
+                                    <p class="advantage-description">
+                                        Оперативно решаем любые вопросы и помогаем в развитии вашего проекта
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="advantage-card" data-advantage="technologies">
+                                <div class="advantage-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606L20.014 18.9606C20.0871 19.3516 19.9546 19.7563 19.6675 20.0241C19.3805 20.2918 18.9768 20.3824 18.6075 20.2668L15.6075 19.2668C15.2831 19.1711 14.9349 19.2005 14.635 19.35L12.635 20.35C12.2668 20.5324 11.7332 20.5324 11.365 20.35L9.365 19.35C9.06513 19.2005 8.71685 19.1711 8.39254 19.2668L5.39254 20.2668C5.02323 20.3824 4.61952 20.2918 4.33249 20.0241C4.04546 19.7563 3.91287 19.3516 3.986 18.9606L4.714 15.9606C4.77284 15.6362 4.73312 15.3016 4.6 15L2.6 12C2.41765 11.6318 2.41765 11.0982 2.6 10.73L4.6 9C4.73312 8.69842 4.77284 8.36379 4.714 8.03942L3.986 5.03942C3.91287 4.64842 4.04546 4.24371 4.33249 3.97594C4.61952 3.70818 5.02323 3.61755 5.39254 3.73319L8.39254 4.73319C8.71685 4.82886 9.06513 4.79947 9.365 4.65L11.365 3.65C11.7332 3.46765 12.2668 3.46765 12.635 3.65L14.635 4.65C14.9349 4.79947 15.2831 4.82886 15.6075 4.73319L18.6075 3.73319C18.9768 3.61755 19.3805 3.70818 19.6675 3.97594C19.9546 4.24371 20.0871 4.64842 20.014 5.03942L19.286 8.03942C19.2272 8.36379 19.2669 8.69842 19.4 9L21.4 10.73C21.5824 11.0982 21.5824 11.6318 21.4 12L19.4 15Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="advantage-content">
+                                    <h3 class="advantage-name">Современные технологии</h3>
+                                    <p class="advantage-description">
+                                        Используем актуальные инструменты и фреймворки для создания надежных решений
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Навигация слайдера -->
+                    <div class="slider-navigation">
+                        <button class="slider-btn prev" aria-label="Предыдущий слайд">‹</button>
+                        <button class="slider-btn next" aria-label="Следующий слайд">›</button>
+                    </div>
+
+                    <!-- Индикаторы слайдера -->
+                    <div class="slider-dots"></div>
+
+                    <!-- Счетчик слайдов -->
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO БЛОК -->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-container">
+                <!-- Заголовок секции -->
+                <div class="portfolio-header">
+                    <h2 class="portfolio-title">Наши работы</h2>
+                    <p class="portfolio-subtitle">
+                        Создаем уникальные проекты, которые приносят результат и вдохновляют пользователей
+                    </p>
+                </div>
+
+                <!-- Фильтры категорий -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="landing">Лендинги</button>
+                    <button class="filter-btn" data-filter="ecommerce">Интернет-магазины</button>
+                    <button class="filter-btn" data-filter="corporate">Корпоративные</button>
+                    <button class="filter-btn" data-filter="creative">Креативные</button>
+                </div>
+
+                <!-- Обертка для слайдера -->
+                <div class="portfolio-wrapper">
+                    <!-- Сетка проектов - Десктопная версия -->
+                    <div class="portfolio-grid" id="portfolioGrid">
+                        <!-- Карточки будут загружены через JavaScript -->
+                    </div>
+
+                    <!-- Кнопка "Посмотреть еще" -->
+                    <div class="portfolio-load-more">
+                        <button class="load-more-btn" id="loadMoreBtn">
+                            <span class="load-more-text">Посмотреть еще</span>
+                            <span class="load-more-count">+2</span>
+                            <svg class="load-more-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 5V19M5 12L19 12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Слайдер для мобильной версии -->
+                    <div class="portfolio-slider">
+                        <div class="portfolio-track">
+                            <!-- Карточки будут дублироваться сюда через JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Навигация слайдера -->
+                    <div class="slider-navigation">
+                        <button class="slider-btn prev" aria-label="Предыдущий слайд">‹</button>
+                        <button class="slider-btn next" aria-label="Следующий слайд">›</button>
+                    </div>
+
+                    <!-- Индикаторы слайдера -->
+                    <div class="slider-dots"></div>
+
+                    <!-- Счетчик слайдов -->
+                    <div class="slider-counter"></div>
+                </div>
+
+                <!-- CTA секция -->
+                <div class="portfolio-cta">
+                    <h3 class="cta-title">Хотите такой же проект?</h3>
+                    <p class="cta-description">Обсудим ваши идеи и создадим что-то уникальное вместе</p>
+                    <a href="#contact" class="cta-button-portfolio">Начать проект</a>
+                </div>
+            </div>
+
+            <!-- Модальное окно для детального просмотра -->
+            <div class="modal-overlay" id="projectModal">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+                    <div class="modal-body">
+                        <!-- Галерея изображений сверху -->
+                        <div class="modal-image-gallery">
+                            <div class="modal-image-container">
+                                <img id="modalImage" src="" alt="">
+                                <button class="gallery-btn prev" id="galleryPrev">‹</button>
+                                <button class="gallery-btn next" id="galleryNext">›</button>
+                            </div>
+                            <div class="modal-image-dots" id="modalImageDots"></div>
+                        </div>
+
+                        <!-- Информация о проекте снизу -->
+                        <div class="modal-info">
+                            <div class="modal-header">
+                                <h3 id="modalTitle">Название проекта</h3>
+                                <p id="modalCategory">Категория</p>
+                            </div>
+
+                            <div class="modal-description">
+                                <p id="modalDescription">Описание проекта...</p>
+                            </div>
+
+                            <div class="modal-details">
+                                <div class="modal-technologies">
+                                    <h4>Технологии:</h4>
+                                    <div id="modalTech"></div>
+                                </div>
+
+                                <div class="modal-features">
+                                    <h4>Особенности:</h4>
+                                    <ul id="modalFeatures"></ul>
+                                </div>
+                            </div>
+
+                            <div class="modal-buttons">
+                                <a id="modalLiveLink" href="#" class="modal-btn primary" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" />
+                                        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                    Посмотреть сайт
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS БЛОК -->
+        <section class="reviews" id="reviews">
+            <div class="reviews-container">
+                <!-- Заголовок секции -->
+                <div class="reviews-header">
+                    <h2 class="reviews-title">Отзывы клиентов</h2>
+                    <p class="reviews-subtitle">
+                        Мнения наших клиентов о качестве работы и результатах проектов
+                    </p>
+                </div>
+
+                <!-- Карусель отзывов -->
+                <div class="reviews-carousel-wrapper">
+                    <div class="reviews-carousel" id="reviewsCarousel">
+                        <!-- Отзыв 1 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Команда WebDev Pro создала потрясающий лендинг для нашего ресторана. Количество
+                                бронирований увеличилось на 40% уже в первый месяц после запуска!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">А</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Анна Петрова</h4>
+                                    <p class="author-position">Владелица ресторана "Вкус жизни"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 2 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Профессиональный подход, современный дизайн и отличная техническая поддержка. Наш
+                                интернет-магазин работает безупречно!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">М</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Михаил Сидоров</h4>
+                                    <p class="author-position">Директор Style Zone</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 3 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Превосходное качество работы! Корпоративный сайт получился именно таким, как мы
+                                представляли. Спасибо за творческий подход!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">Е</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Елена Иванова</h4>
+                                    <p class="author-position">CEO TechSolutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 4 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Работать с WebDev Pro - одно удовольствие! Креативные идеи, современные технологии и
+                                потрясающий результат. Рекомендую!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">А</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Анна Светлова</h4>
+                                    <p class="author-position">Фотограф</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 5 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Медицинский центр получил современный и удобный сайт. Пациенты теперь легко
+                                записываются онлайн. Отличная работа!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">Д</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Дмитрий Волков</h4>
+                                    <p class="author-position">Главврач "Здоровье+"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 6 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Лендинг для нашего приложения получился стильным и конверсионным. Количество скачиваний
+                                выросло в 3 раза!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">И</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Игорь Козлов</h4>
+                                    <p class="author-position">Основатель TaskMaster</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 7 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Безупречная работа с банковской платформой. Высокий уровень безопасности и отличный UX.
+                                Клиенты довольны!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">О</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Олег Морозов</h4>
+                                    <p class="author-position">IT-директор FinanceFlow</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 8 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Образовательная платформа работает стабильно и быстро. Студенты в восторге от
+                                интерфейса. Спасибо за качество!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">М</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Мария Кузнецова</h4>
+                                    <p class="author-position">Директор EduMaster</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 9 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Превысили все ожидания! Сайт нашей юридической компании выглядит солидно и
+                                профессионально. Клиенты впечатлены!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">А</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Александр Белов</h4>
+                                    <p class="author-position">Партнер юр. бюро "Правосудие"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 10 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Интернет-магазин косметики получился мечтательным! Продажи выросли на 60%. Команда -
+                                настоящие профессионалы!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">Е</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Екатерина Романова</h4>
+                                    <p class="author-position">Основательница BeautyShop</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 11 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Сайт автосалона превзошел ожидания! Современный дизайн, удобная навигация. Клиенты
+                                легко находят нужные автомобили."
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">С</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Сергей Николаев</h4>
+                                    <p class="author-position">Директор автосалона "Премиум"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 12 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Блестящая работа над сайтом нашего фитнес-клуба! Онлайн-запись работает без сбоев,
+                                членство растет каждый месяц."
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">Н</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Наталья Орлова</h4>
+                                    <p class="author-position">Владелица фитнес-клуба "Энергия"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 13 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Потрясающий лендинг для нашего стартапа! Инвесторы были впечатлены презентацией.
+                                Привлекли дополнительное финансирование!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">А</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Андрей Соколов</h4>
+                                    <p class="author-position">CEO стартапа "InnovateTech"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 14 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Сайт для нашего агентства недвижимости получился функциональным и стильным. Поиск
+                                объектов стал намного удобнее!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">Л</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Людмила Васильева</h4>
+                                    <p class="author-position">Директор "Золотой ключ"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 15 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Веб-приложение для нашей логистической компании работает безупречно. Отслеживание
+                                грузов стало прозрачным и удобным."
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">В</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Виктор Лебедев</h4>
+                                    <p class="author-position">Руководитель "Быстрая доставка"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 16 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Интернет-магазин детских товаров получился ярким и удобным! Родители легко находят
+                                нужные товары. Продажи растут!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">О</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Ольга Смирнова</h4>
+                                    <p class="author-position">Основательница "Детский мир+"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 17 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Сайт нашей консалтинговой компании выглядит очень профессионально. Клиенты отмечают
+                                удобство и информативность!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">П</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Павел Федоров</h4>
+                                    <p class="author-position">Партнер "Бизнес-Консалт"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 18 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Платформа для онлайн-курсов превзошла ожидания! Студенты активно изучают материалы,
+                                конверсия в покупки выросла в 2 раза."
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #31493c;">И</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Ирина Захарова</h4>
+                                    <p class="author-position">Основательница "Онлайн-Академия"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 19 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Лендинг для нашего event-агентства получился креативным и запоминающимся. Количество
+                                заявок увеличилось на 85%!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #b3efb2;">Д</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Денис Попов</h4>
+                                    <p class="author-position">Директор "Праздник-Про"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Отзыв 20 -->
+                        <div class="review-card">
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">
+                                "Сайт для нашей сети кафе получился стильным и функциональным. Онлайн-заказы и
+                                бронирование столиков работают отлично!"
+                            </p>
+                            <div class="review-author">
+                                <div class="author-avatar" style="background-color: #7a9e7e;">Т</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Татьяна Григорьева</h4>
+                                    <p class="author-position">Управляющая сети "Кофе&Ко"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Навигация -->
+                <div class="reviews-navigation">
+                    <button class="reviews-btn prev" id="prevBtn">‹</button>
+                    <button class="reviews-btn next" id="nextBtn">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT БЛОК -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <!-- Заголовок секции -->
+                <div class="contact-header">
+                    <h2 class="contact-title">Оставьте заявку</h2>
+                    <p class="contact-subtitle">
+                        Расскажите о своем проекте, и мы свяжемся с вами в течение часа
+                    </p>
+                </div>
+
+                <!-- Основной контент -->
+                <div class="contact-content">
+                    <!-- Форма заказа -->
+                    <div class="contact-form-section">
+                        <div class="form-decoration"></div>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="userName" class="form-label">Ваше имя *</label>
+                                    <input type="text" id="userName" name="name" class="form-input" required
+                                        placeholder="Введите ваше имя">
+                                    <div class="form-error" id="nameError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="userPhone" class="form-label">Телефон *</label>
+                                    <input type="text" id="userPhone" name="phone" class="form-input" required
+                                        placeholder="+7 (999) 123-45-67">
+                                    <div class="form-error" id="phoneError"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userEmail" class="form-label">Email</label>
+                                <input type="email" id="userEmail" name="email" class="form-input" required
+                                    placeholder="youremail@example.com">
+                                <div class="form-error" id="emailError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userMessage" class="form-label">Сообщение</label>
+                                <textarea id="userMessage" name="message" class="form-textarea" rows="3"
+                                    placeholder="Расскажите подробнее о вашем проекте..."></textarea>
+                                <div class="form-error" id="messageError"></div>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span class="btn-bg"></span>
+                                    <span class="submit-text">Отправить заявку</span>
+                                    <span class="submit-loader">
+                                        <div class="spinner"></div>
+                                    </span>
+                                    <svg class="submit-icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Сообщение об успехе -->
+                            <div class="form-success" id="successMessage">
+                                <div class="success-animation">
+                                    <svg class="success-icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <span>Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Контактная информация -->
+                    <div class="contact-info-section">
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="card-glow"></div>
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22 16.92V19.92C22 20.4728 21.5523 20.9219 21 20.9219H19C10.1634 20.9219 3.07812 13.8366 3.07812 5H6.07812C6.63091 5 7.07812 5.44772 7.07812 6V8.92C7.07812 9.47278 6.63091 9.92 6.07812 9.92H4.4C5.4 14.92 9.08 18.6 14.08 19.6V17.92C14.08 17.3672 14.5277 16.92 15.08 16.92H18C18.5528 16.92 19 17.3672 19 17.92V19.92Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Телефон</h4>
+                                    <p>+994 50 552 92 10</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="card-glow"></div>
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>info@webdevpro.ru</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="card-glow"></div>
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Время работы</h4>
+                                    <p>Пн-Пт: 9:00-19:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Социальные сети -->
+                        <div class="social-section">
+                            <div class="social-decoration"></div>
+                            <h4>Мы в социальных сетях</h4>
+                            <div class="social-links">
+                                <a href="https://t.me/webdevpro" class="social-link telegram" target="_blank"
+                                    title="Telegram">
+                                    <div class="social-bg"></div>
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.17 1.868-.896 6.728-.896 6.728-.377 2.46-1.396 2.88-2.855 1.787l-2.406-1.767-1.16 1.119c-.287.282-.526.518-1.079.518l.386-5.415 9.956-8.998c.433-.386-.094-.6-.673-.214L7.056 13.44l-3.846-1.203c-.835-.262-.85-.835.175-1.237L18.28 6.73c.692-.26 1.397.174 1.288 1.43z" />
+                                    </svg>
+                                </a>
+
+                                <a href="https://wa.me/79991234567" class="social-link whatsapp" target="_blank"
+                                    title="WhatsApp">
+                                    <div class="social-bg"></div>
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                                    </svg>
+                                </a>
+
+                                <a href="https://instagram.com/webdevpro" class="social-link instagram" target="_blank"
+                                    title="Instagram">
+                                    <div class="social-bg"></div>
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER БЛОК -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <a href="#" class="footer-logo">WebDev Pro</a>
+                        <p class="footer-description">
+                            Профессиональная разработка современных веб-сайтов и приложений. Создаем цифровые решения,
+                            которые работают на вас.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://t.me/timurdeveloper" class="social-link" target="_blank" title="Telegram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.17 1.868-.896 6.728-.896 6.728-.377 2.46-1.396 2.88-2.855 1.787l-2.406-1.767-1.16 1.119c-.287.282-.526.518-1.079.518l.386-5.415 9.956-8.998c.433-.386-.094-.6-.673-.214L7.056 13.44l-3.846-1.203c-.835-.262-.85-.835.175-1.237L18.28 6.73c.692-.26 1.397.174 1.288 1.43z" />
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/994505529210" class="social-link" target="_blank" title="WhatsApp">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/miltim7" class="social-link" target="_blank"
+                                title="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Компания</h3>
+                        <ul class="footer-links">
+                            <li><a href="/#hero">Главная</a></li>
+                            <li><a href="/#services">Услуги</a></li>
+                            <li><a href="/#advantages">Преимущества</a></li>
+                            <li><a href="/#portfolio">Портфолио</a></li>
+                            <li><a href="/#reviews">Отзывы</a></li>
+                            <li><a href="/#contact">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Контакты</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">Email: timursailing70@gmail.com</div>
+                            <div class="contact-item">Телефон: +994 50 552 92 10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 WebDev Pro. Все права защищены.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy.html">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+    <script src="header/header.js"></script>
+    <script src="hero/hero.js"></script>
+    <script src="services/services.js"></script>
+    <script src="advantages/advantages.js"></script>
+    <script src="portfolio/portfolio.js"></script>
+    <script src="reviews/reviews.js"></script>
+    <script src="contact/contact.js"></script>
+</body>
+
+</html>

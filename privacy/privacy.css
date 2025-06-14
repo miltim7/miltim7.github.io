@@ -1,0 +1,379 @@
+/* Специальные стили для страницы политики конфиденциальности */
+.privacy-page {
+    background-color: #e8f1f2;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(2rem, 8vw, 4rem) clamp(3%, 5vw, 5%);
+}
+
+.privacy-header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 6vw, 4rem);
+    position: relative;
+}
+
+.privacy-title {
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    font-weight: 800;
+    color: #001a23;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    line-height: 1.2;
+}
+
+.privacy-title::after {
+    content: '';
+    position: absolute;
+    bottom: clamp(-8px, -1.5vw, -10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(40px, 10vw, 80px);
+    height: clamp(3px, 0.8vw, 4px);
+    background: linear-gradient(90deg, #b3efb2, #7a9e7e);
+    border-radius: 2px;
+}
+
+.privacy-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #31493c;
+    max-width: clamp(300px, 80%, 600px);
+    margin: 0 auto;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    line-height: 1.5;
+}
+
+.privacy-content {
+    background: #ffffff;
+    border-radius: clamp(15px, 4vw, 25px);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    box-shadow: 0 clamp(10px, 3vw, 20px) clamp(20px, 6vw, 40px) rgba(0, 26, 35, 0.1);
+    border: 1px solid rgba(179, 239, 178, 0.2);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s ease 0.6s forwards;
+}
+
+.privacy-section {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.privacy-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #001a23;
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    padding-left: clamp(15px, 3vw, 20px);
+    line-height: 1.3;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(3px, 0.8vw, 4px);
+    height: clamp(20px, 5vw, 30px);
+    background: linear-gradient(135deg, #b3efb2, #7a9e7e);
+    border-radius: 2px;
+}
+
+.section-content {
+    color: #31493c;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.7;
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.section-content p {
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+}
+
+.data-list {
+    list-style: none;
+    padding: 0;
+    margin: clamp(1rem, 3vw, 1.5rem) 0;
+}
+
+.data-list li {
+    background: #e8f1f2;
+    margin: clamp(0.5rem, 1.5vw, 0.8rem) 0;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: clamp(10px, 2.5vw, 15px);
+    border-left: clamp(3px, 0.8vw, 4px) solid #7a9e7e;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-left: clamp(2rem, 5vw, 3rem);
+}
+
+.data-list li:hover {
+    background: rgba(179, 239, 178, 0.2);
+    transform: translateX(clamp(2px, 1vw, 5px));
+    box-shadow: 0 clamp(2px, 1vw, 4px) clamp(8px, 2vw, 15px) rgba(122, 158, 126, 0.2);
+}
+
+.data-list li::before {
+    content: '✓';
+    position: absolute;
+    left: clamp(0.4rem, 1vw, 0.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7a9e7e;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.data-list li strong {
+    color: #001a23;
+    font-weight: 600;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, rgba(179, 239, 178, 0.1), rgba(122, 158, 126, 0.05));
+    border: 2px solid #b3efb2;
+    border-radius: clamp(15px, 3vw, 20px);
+    padding: clamp(1.5rem, 4vw, 2rem);
+    margin: clamp(1.5rem, 3vw, 2rem) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(3px, 0.8vw, 4px);
+    background: linear-gradient(90deg, #b3efb2, #7a9e7e);
+}
+
+.highlight-title {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    color: #001a23;
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+.highlight-box .section-content {
+    margin-bottom: 0;
+}
+
+.highlight-box em {
+    font-style: italic;
+    color: #7a9e7e;
+    font-weight: 500;
+}
+
+/* СПЕЦИФИЧНЫЕ СТИЛИ ДЛЯ CONTACT-INFO В PRIVACY СТРАНИЦЕ */
+.privacy-page .contact-info {
+    background: #001a23;
+    color: #e8f1f2;
+    border-radius: clamp(15px, 3vw, 20px);
+    padding: clamp(2rem, 5vw, 2.5rem);
+    text-align: center;
+    margin-top: clamp(2rem, 5vw, 3rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.privacy-page .contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(3px, 0.8vw, 4px);
+    background: linear-gradient(90deg, #b3efb2, #7a9e7e);
+}
+
+.privacy-page .contact-info p {
+    color: #e8f1f2;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.privacy-page .contact-title {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: #b3efb2;
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3;
+}
+
+.privacy-page .contact-email {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #7a9e7e;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.privacy-page .contact-email:hover {
+    color: #b3efb2;
+    transform: translateY(-2px);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+    background: linear-gradient(135deg, #31493c, #7a9e7e);
+    color: #e8f1f2;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border-radius: clamp(25px, 6vw, 50px);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.4s ease;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    box-shadow: 0 clamp(4px, 1.5vw, 8px) clamp(15px, 4vw, 25px) rgba(49, 73, 60, 0.3);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.back-button::before {
+    content: '←';
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.back-button:hover {
+    transform: translateY(clamp(-2px, -0.5vw, -3px));
+    box-shadow: 0 clamp(8px, 2vw, 12px) clamp(20px, 5vw, 35px) rgba(122, 158, 126, 0.4);
+    background: linear-gradient(135deg, #7a9e7e, #b3efb2);
+    color: #001a23;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ FINE-TUNING */
+
+/* Большие экраны */
+@media (min-width: 1400px) {
+    .privacy-container {
+        max-width: 1000px;
+    }
+    
+    .privacy-title {
+        font-size: 3.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Средние экраны */
+@media (max-width: 1024px) {
+    .privacy-page {
+        padding-top: 60px;
+    }
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .privacy-page {
+        padding-top: 70px;
+    }
+    
+    .data-list li {
+        padding-left: 2.5rem;
+    }
+    
+    .data-list li::before {
+        left: 0.6rem;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 480px) {
+    .privacy-page {
+        padding-top: 65px;
+    }
+    
+    .section-title {
+        padding-left: 18px;
+    }
+    
+    .data-list li {
+        padding-left: 2.2rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .privacy-page {
+        padding-top: 60px;
+    }
+    
+    .section-title {
+        padding-left: 15px;
+    }
+    
+    .data-list li {
+        padding-left: 2rem;
+    }
+}
+
+/* Hover эффекты только для устройств с мышью */
+@media (hover: hover) {
+    .data-list li:hover {
+        background: rgba(179, 239, 178, 0.2);
+        transform: translateX(5px);
+        box-shadow: 0 4px 15px rgba(122, 158, 126, 0.2);
+    }
+}
+
+/* Touch устройства */
+@media (hover: none) {
+    .data-list li:active {
+        background: rgba(179, 239, 178, 0.2);
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    
+    .back-button:active {
+        transform: scale(0.95);
+    }
+    
+    .privacy-page .contact-email:active {
+        color: #b3efb2;
+        transform: scale(0.95);
+    }
+}
