@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Главная страница -->
+    <url>
+        <loc>https://timurwebdev.com/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/og-image.jpg</image:loc>
+            <image:title>WebDev Pro - Разработка сайтов в Баку</image:title>
+            <image:caption>Профессиональная веб-разработка от команды WebDev Pro</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Страница политики конфиденциальности -->
+    <url>
+        <loc>https://timurwebdev.com/privacy.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Секция услуг -->
+    <url>
+        <loc>https://timurwebdev.com/#services</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Секция портфолио -->
+    <url>
+        <loc>https://timurwebdev.com/#portfolio</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Секция отзывов -->
+    <url>
+        <loc>https://timurwebdev.com/#reviews</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Контакты -->
+    <url>
+        <loc>https://timurwebdev.com/#contact</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Преимущества -->
+    <url>
+        <loc>https://timurwebdev.com/#advantages</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Изображения портфолио -->
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio1.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio1.png</image:loc>
+            <image:title>Agafonov Wedd - Корпоративный сайт</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio2.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio2.png</image:loc>
+            <image:title>Streamline - Лендинг логистической компании</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio3.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio3.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio4.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio4.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio5.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio5.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio6.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio6.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio7.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio7.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio8.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio8.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://timurwebdev.com/assets/images/portfolio9.png</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+        <image:image>
+            <image:loc>https://timurwebdev.com/assets/images/portfolio9.png</image:loc>
+            <image:title>Design Way - Корпоративный сайт дизайн-студии</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Остальные изображения портфолио аналогично -->
+    
+</urlset>

@@ -1,0 +1,42 @@
+# robots.txt для timurwebdev.com
+# Правила для всех поисковых роботов
+
+User-agent: *
+Allow: /
+
+# Разрешаем доступ к важным файлам
+Allow: /assets/
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.ico
+Allow: /manifest.json
+
+# Запрещаем доступ к служебным файлам
+Disallow: /logs/
+Disallow: /.htaccess
+Disallow: /send-form.php
+Disallow: /*.log
+Disallow: /tmp/
+Disallow: /backup/
+
+# Правила для основных поисковиков
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Ссылка на карту сайта
+Sitemap: https://timurwebdev.com/sitemap.xml

@@ -159,26 +159,6 @@
     z-index: 2;
 }
 
-.review-text::before {
-    content: '"';
-    position: absolute;
-    left: -0.5rem;
-    top: -0.2rem;
-    font-size: 2rem;
-    color: #7a9e7e;
-    font-family: serif;
-}
-
-.review-text::after {
-    content: '"';
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0;
-    font-size: 2rem;
-    color: #7a9e7e;
-    font-family: serif;
-}
-
 /* Автор отзыва */
 .review-author {
     display: flex;

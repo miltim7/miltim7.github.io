@@ -2,14 +2,19 @@
   "projects": [
     {
       "id": 1,
-      "title": "Ресторан \"Вкус жизни\"",
-      "category": "landing",
-      "categoryName": "Лендинг",
+      "title": "Agafonov Wedd",
+      "category": "corporate",
+      "categoryName": "Корпоративный сайт",
       "images": [
         "assets/images/portfolio1.png"
       ],
       "description": "Современный лендинг для ресторана высокой кухни с системой онлайн-бронирования столиков и интеграцией с социальными сетями.",
-      "technologies": ["HTML5", "CSS3", "JavaScript", "PHP"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP"
+      ],
       "features": [
         "Адаптивный дизайн для всех устройств",
         "Система онлайн-бронирования",
@@ -17,37 +22,47 @@
         "SEO-оптимизация",
         "Анимации и интерактивность"
       ],
-      "liveLink": "#"
+      "liveLink": "https://www.agafonovwedd.ru"
     },
     {
       "id": 2,
-      "title": "Магазин \"Style Zone\"",
-      "category": "ecommerce",
-      "categoryName": "Интернет-магазин",
+      "title": "Streamline",
+      "category": "landing",
+      "categoryName": "ЛЕНДИНГ",
       "images": [
         "assets/images/portfolio2.png"
       ],
-      "description": "Полнофункциональный интернет-магазин одежды с корзиной, системой платежей, личным кабинетом и админ-панелью.",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "description": "Сайт, представляющий логистическую компанию и её услуги, Streamline",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP"
+      ],
       "features": [
         "Система авторизации и регистрации",
+        "Мультиязычность",
         "Корзина и оформление заказов",
-        "Интеграция платежных систем",
         "Административная панель",
         "Поиск и фильтрация товаров"
       ],
-      "liveLink": "#"
+      "liveLink": "https://streamline.az"
     },
     {
       "id": 3,
-      "title": "TechSolutions",
+      "title": "Design Way",
       "category": "corporate",
       "categoryName": "Корпоративный сайт",
       "images": [
         "assets/images/portfolio3.png"
       ],
-      "description": "Корпоративный сайт IT-компании с презентацией услуг, портфолио, блогом и формой обратной связи.",
-      "technologies": ["Vue.js", "TypeScript", "SASS", "Laravel"],
+      "description": "Корпоративный сайт студии графического дизайна, ",
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "SCSS",
+        "Node.js"
+      ],
       "features": [
         "Многостраничная архитектура",
         "Система управления контентом",
@@ -55,18 +70,24 @@
         "Блог с комментариями",
         "Мультиязычность"
       ],
-      "liveLink": "#"
+      "liveLink": "https://design-way.ru/"
     },
     {
       "id": 4,
-      "title": "Фотограф Анна Светлова",
-      "category": "creative",
-      "categoryName": "Креативное портфолио",
+      "title": "A3 Consult",
+      "category": "corporate",
+      "categoryName": "Корпоративный сайт",
       "images": [
         "assets/images/portfolio4.png"
       ],
-      "description": "Креативное портфолио фотографа с галереей работ, анимациями и возможностью заказа фотосессии.",
-      "technologies": ["Next.js", "Framer Motion", "Three.js", "Prisma"],
+      "description": "Сайт комплексного консалтинга",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP",
+        "SEO"
+      ],
       "features": [
         "Интерактивная галерея с лайтбоксом",
         "3D эффекты и анимации",
@@ -74,7 +95,7 @@
         "Оптимизация изображений",
         "Плавные переходы между страницами"
       ],
-      "liveLink": "#"
+      "liveLink": "https://a3consult.ru/"
     },
     {
       "id": 5,
@@ -85,13 +106,17 @@
         "assets/images/portfolio5.png"
       ],
       "description": "Сайт, посвященный родословной семьи Шуховцевых! Основной раздел сайта - древовидная структура всех родственников",
-      "technologies": ["React.js", "Node.js"],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "SQL",
+        "TypeScript",
+        "CSS3"
+      ],
       "features": [
-        "Онлайн запись к врачам",
-        "База данных специалистов",
-        "Система отзывов пациентов",
-        "Интеграция с календарем",
-        "Мобильная адаптация"
+        "Сложная логика древовидной структуры",
+        "Административная панель",
+        "Глубоко продуманный дизайн"
       ],
       "liveLink": "https://family-tree2.vercel.app"
     },
@@ -104,45 +129,55 @@
         "assets/images/portfolio6.png"
       ],
       "description": "Интернет магазин по продаже брендовой одежды в Азербайджане. Проект закрылся",
-      "technologies": ["Next.js", "Tailwind CSS", "SQL"],
-      "features": [
-        "Презентация функций приложения",
-        "Интерактивные демо-блоки",
-        "Ссылки на App Store и Google Play",
-        "Анимированные иллюстрации",
-        "A/B тестирование элементов"
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "SQL"
       ],
-      "liveLink": "#"
+      "features": [
+        "Личный кабинен",
+        "Поиск и фильтрация товаров",
+        "Широкий каталог товаров",
+        "Главная страница - Лендинг"
+      ],
+      "liveLink": "http://galantstyle.com/"
     },
     {
       "id": 7,
-      "title": "Банк \"FinanceFlow\"",
+      "title": "Star Sell Pro",
       "category": "ecommerce",
-      "categoryName": "Финтех платформа",
+      "categoryName": "Интернет-магазин",
       "images": [
         "assets/images/portfolio7.png"
       ],
-      "description": "Современная платформа онлайн-банкинга с мобильными платежами, инвестициями и аналитикой финансов.",
-      "technologies": ["Angular", "NestJS", "PostgreSQL", "Docker"],
-      "features": [
-        "Система безопасных платежей",
-        "Инвестиционный портфель",
-        "Аналитика расходов и доходов",
-        "Многофакторная аутентификация",
-        "API для интеграции с банками"
+      "description": "Starsell - сервис для покупки Telegram-звёзд дешевле, чем в других магазинах.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Node.js",
+        "LAVA"
       ],
-      "liveLink": "#"
+      "features": [
+        "Интеграция платежных систем",
+        "API интеграция с Telegram",
+        "Адаптивный дизайн для всех устройств"
+      ],
+      "liveLink": "https://starsellpro.com/"
     },
     {
       "id": 8,
-      "title": "Платформа \"EduMaster\"",
-      "category": "creative",
-      "categoryName": "Образовательная платформа",
+      "title": "Match Point BOT",
+      "category": "landing",
+      "categoryName": "ЛЕНДИНГ",
       "images": [
         "assets/images/portfolio8.png"
       ],
       "description": "Интерактивная образовательная платформа с видеокурсами, тестированием и системой сертификации.",
-      "technologies": ["Django", "Vue.js", "Redis", "WebRTC"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "SEO"
+      ],
       "features": [
         "Видеостриминг высокого качества",
         "Интерактивные тесты и квизы",
@@ -150,7 +185,32 @@
         "Прогресс-трекинг обучения",
         "Вебинары и онлайн-конференции"
       ],
-      "liveLink": "#"
+      "liveLink": "https://matchpoint.bot/"
+    },
+    {
+      "id": 9,
+      "title": "WEB DEV",
+      "category": "landing",
+      "categoryName": "ЛЕНДИНГ",
+      "images": [
+        "assets/images/portfolio9.png"
+      ],
+      "description": "Стильный сайт для продажи услуг по веб разработке",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "PHP",
+        "JavaScript",
+        "SEO"
+      ],
+      "features": [
+        "Адаптивный дизайн для всех устройств",
+        "3D эффекты и анимации",
+        "Форма отправки данных в Telegram BOT",
+        "Плавный показ анимации при скроллинге",
+        "Кроссбраузерность"
+      ],
+      "liveLink": "https://matchpoint.bot/"
     }
   ]
 }
